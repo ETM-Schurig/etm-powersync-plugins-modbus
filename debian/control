@@ -1,0 +1,48 @@
+Source: etm-powersync-plugins-modbus
+Section: utils
+Priority: optional
+Maintainer: ETM-Schurig SARL <contact@etm-schurig.eu>
+Standards-Version: 4.7.2
+Homepage: https://etm-powersync.fr
+Vcs-Git: https://git.etm-powersync.fr/ETM-Schurig/etm-powersync-plugins-modbus.git
+Build-Depends: debhelper,
+               pkg-config,
+               libnymea-dev,
+               nymea-dev-tools:native,
+               libnymea-modbus-dev,
+               libnymea-sunspec-dev,
+               qt6-base-dev,
+               qt6-base-dev-tools,
+               qt6-serialport-dev,
+               qt6-serialbus-dev,
+
+Package: powersync-plugin-eastron
+Architecture: any
+Section: libs
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+Description: PowerSync integration plugin for Eastron SDM energy meters (Modbus RTU)
+ nymea integration plugin for Eastron SDM72 / SDM120 / SDM630 energy meters
+ over Modbus RTU, for use by the ETM PowerSync home energy management system.
+
+Package: nymea-plugin-sunspec-etm01
+Architecture: any
+Section: libs
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+Conflicts: nymea-plugin-sunspec
+Replaces: nymea-plugin-sunspec
+Provides: nymea-plugin-sunspec
+Description: SunSpec Modbus devices, ETM fork with Fronius support - vendored
+ nymea integration plugin for SunSpec compatible solar inverters, meters and
+ storage over Modbus TCP.  ETM fork of the upstream plugin, adding the Fronius
+ vendor: a GEN24 answers for the inverter and for its Smart Meter on separate
+ unit IDs behind one host and port, so one connection thing carries two.
+ .
+ Ships the same plugin file and the same pluginId as the upstream
+ nymea-plugin-sunspec, which it therefore conflicts with and replaces.  The
+ -etm01 suffix marks the fork; the name goes back to nymea-plugin-sunspec if
+ the Fronius vendor is ever merged upstream.
+ .
+ Status: Partial - verified against a SunSpec simulator only, never on a real
+ inverter.

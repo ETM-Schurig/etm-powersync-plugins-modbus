@@ -1,0 +1,976 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1">
+<context>
+    <name>IntegrationPluginSunSpec</name>
+    <message>
+        <location filename="../integrationpluginsunspec.cpp" line="147"/>
+        <source>The discovery is not available.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../integrationpluginsunspec.cpp" line="354"/>
+        <source>The SunSpec connection is not connected.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../integrationpluginsunspec.cpp" line="471"/>
+        <source>Single Phase Inverter</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../integrationpluginsunspec.cpp" line="475"/>
+        <source>Split Phase Inverter</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../integrationpluginsunspec.cpp" line="479"/>
+        <source>Three Phase Inverter</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../integrationpluginsunspec.cpp" line="483"/>
+        <source>Single Phase Meter</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../integrationpluginsunspec.cpp" line="487"/>
+        <source>Split Phase Meter</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../integrationpluginsunspec.cpp" line="493"/>
+        <source>Three Phase Meter</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../integrationpluginsunspec.cpp" line="496"/>
+        <source>Storage</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../integrationpluginsunspec.cpp" line="556"/>
+        <source>The SunSpec discovery finished with errors. Please make sure this is a SunSpec device.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../integrationpluginsunspec.cpp" line="890"/>
+        <source>Ground fault</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../integrationpluginsunspec.cpp" line="894"/>
+        <source>DC over voltage</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../integrationpluginsunspec.cpp" line="898"/>
+        <source>AC disconnect</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../integrationpluginsunspec.cpp" line="902"/>
+        <source>DC disconnect</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../integrationpluginsunspec.cpp" line="906"/>
+        <source>Grid disconnect</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../integrationpluginsunspec.cpp" line="910"/>
+        <source>Cabinet open</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../integrationpluginsunspec.cpp" line="914"/>
+        <source>Manual shutdown</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../integrationpluginsunspec.cpp" line="918"/>
+        <source>Over temperature</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../integrationpluginsunspec.cpp" line="922"/>
+        <source>Over frequency</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../integrationpluginsunspec.cpp" line="926"/>
+        <source>Under frequency</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../integrationpluginsunspec.cpp" line="930"/>
+        <source>AC over voltage</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../integrationpluginsunspec.cpp" line="934"/>
+        <source>AC under voltage</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../integrationpluginsunspec.cpp" line="938"/>
+        <source>Blown string fuse</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../integrationpluginsunspec.cpp" line="942"/>
+        <source>Under temperature</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../integrationpluginsunspec.cpp" line="946"/>
+        <source>Memory loss</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../integrationpluginsunspec.cpp" line="950"/>
+        <source>Hardware test failure</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../integrationpluginsunspec.cpp" line="954"/>
+        <source>No error</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SunSpec</name>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="219"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="222"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="225"/>
+        <source>AC energy</source>
+        <extracomment>The name of the StateType ({d493880d-eb58-4530-8010-8ea4f6d63387}) of ThingClass sunspecThreePhaseInverter
+----------
+The name of the StateType ({fe3f8a65-121a-4ae1-b22a-ae325dc3e7e6}) of ThingClass sunspecSplitPhaseInverter
+----------
+The name of the StateType ({4c0407b3-5cd5-438d-bfa8-9a8d6695b458}) of ThingClass sunspecSinglePhaseInverter</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="228"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="231"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="234"/>
+        <source>AC power</source>
+        <extracomment>The name of the StateType ({14036f44-25fd-4e93-8e8c-c677b06a2c34}) of ThingClass sunspecThreePhaseInverter
+----------
+The name of the StateType ({9235eb4b-906c-4557-8e18-bca268a367cc}) of ThingClass sunspecSplitPhaseInverter
+----------
+The name of the StateType ({f49591d6-d759-4be3-bafc-b6a7a72cf023}) of ThingClass sunspecSinglePhaseInverter</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="237"/>
+        <source>Available energy</source>
+        <extracomment>The name of the StateType ({7ac7ccd1-b5d1-488b-a99b-98ef000b7d03}) of ThingClass solarEdgeBattery</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="240"/>
+        <source>Average temperature</source>
+        <extracomment>The name of the StateType ({f46298e5-d06c-4ebe-869a-d9feff1a4689}) of ThingClass solarEdgeBattery</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="243"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="246"/>
+        <source>Battery critical</source>
+        <extracomment>The name of the StateType ({897616db-e815-4cda-b890-13b37a94ad17}) of ThingClass solarEdgeBattery
+----------
+The name of the StateType ({3171a6e0-43a7-4de8-8e20-f748e44af7ac}) of ThingClass sunspecStorage</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="249"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="252"/>
+        <source>Battery level</source>
+        <extracomment>The name of the StateType ({a4b0c8c9-44f0-43e2-ab25-63fdc9772fb8}) of ThingClass solarEdgeBattery
+----------
+The name of the StateType ({0bf53f80-97f8-488b-b514-58f9fe08c183}) of ThingClass sunspecStorage</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="255"/>
+        <source>Battery status</source>
+        <extracomment>The name of the StateType ({9c24b27a-3ea1-4db1-8868-6c999aad0a18}) of ThingClass solarEdgeBattery</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="258"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="261"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="264"/>
+        <source>Cabinet temperature</source>
+        <extracomment>The name of the StateType ({44b0320f-89a7-4248-bad4-288ef898a5cc}) of ThingClass sunspecThreePhaseInverter
+----------
+The name of the StateType ({6d314d50-b990-4a58-a37f-4a3da42c4407}) of ThingClass sunspecSplitPhaseInverter
+----------
+The name of the StateType ({51461bde-1a6b-4aa1-94cc-59829ea0a7c8}) of ThingClass sunspecSinglePhaseInverter</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="267"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="270"/>
+        <source>Charging</source>
+        <extracomment>The name of the ParamType (ThingClass: sunspecStorage, ActionType: enableCharging, ID: {1f530f79-c0d2-466b-90e1-79149e34d92f})
+----------
+The name of the StateType ({1f530f79-c0d2-466b-90e1-79149e34d92f}) of ThingClass sunspecStorage</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="273"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="276"/>
+        <source>Charging rate</source>
+        <extracomment>The name of the ParamType (ThingClass: sunspecStorage, ActionType: chargingRate, ID: {7f469bbc-64a5-4045-8d5f-9a1a85039851})
+----------
+The name of the StateType ({7f469bbc-64a5-4045-8d5f-9a1a85039851}) of ThingClass sunspecStorage</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="279"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="282"/>
+        <source>Charging state</source>
+        <extracomment>The name of the StateType ({815b0826-c392-4249-a271-19e92ebe46e0}) of ThingClass solarEdgeBattery
+----------
+The name of the StateType ({f6178427-8e04-45c7-abec-27d04dd5ff04}) of ThingClass sunspecStorage</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="285"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="288"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="291"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="294"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="297"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="300"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="303"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="306"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="309"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="312"/>
+        <source>Connected</source>
+        <extracomment>The name of the StateType ({8addf8aa-f879-4afa-935d-4d2ffa38d05e}) of ThingClass solarEdgeBattery
+----------
+The name of the StateType ({f51d4e5a-24ea-41f9-a453-d2bdd68d804c}) of ThingClass solarEdgeConnection
+----------
+The name of the StateType ({25a1fb10-a6b9-4037-b7cf-ad481a65beb4}) of ThingClass sunspecStorage
+----------
+The name of the StateType ({36f861c7-afc1-4725-b41f-67113200d78f}) of ThingClass sunspecThreePhaseMeter
+----------
+The name of the StateType ({34e34ec9-dab0-438c-9493-a3068bc401de}) of ThingClass sunspecSplitPhaseMeter
+----------
+The name of the StateType ({d960e7b1-d4aa-4cab-8f54-6bcfdbb8be36}) of ThingClass sunspecSinglePhaseMeter
+----------
+The name of the StateType ({4401468c-0385-40a9-b436-daf7ed6a50d5}) of ThingClass sunspecThreePhaseInverter
+----------
+The name of the StateType ({27b49640-f58b-466e-a225-a4663cf3ed96}) of ThingClass sunspecSplitPhaseInverter
+----------
+The name of the StateType ({48bf31c4-fda7-41e5-a3ef-3011bf96e104}) of ThingClass sunspecSinglePhaseInverter
+----------
+The name of the StateType ({3e767ad0-b4b3-4398-94c1-00579ea09ca8}) of ThingClass sunspecConnection</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="315"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="318"/>
+        <source>Current power phase A</source>
+        <extracomment>The name of the StateType ({0e3e8870-3d59-4ee8-b7aa-33bda68b6ae3}) of ThingClass sunspecThreePhaseMeter
+----------
+The name of the StateType ({57c0f5ba-a104-424b-b8d4-8bab90acf009}) of ThingClass sunspecSplitPhaseMeter</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="321"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="324"/>
+        <source>Current power phase B</source>
+        <extracomment>The name of the StateType ({453d046c-3a66-4590-882c-1283882918fc}) of ThingClass sunspecThreePhaseMeter
+----------
+The name of the StateType ({456f7cdf-9756-49b8-9084-f212199d4014}) of ThingClass sunspecSplitPhaseMeter</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="327"/>
+        <source>Current power phase C</source>
+        <extracomment>The name of the StateType ({ba4e94de-9136-48a7-aad8-3d5cd0e7d968}) of ThingClass sunspecThreePhaseMeter</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="330"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="333"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="336"/>
+        <source>DC current</source>
+        <extracomment>The name of the StateType ({81a989aa-4104-438e-bfc5-4f44ce5ceeaf}) of ThingClass sunspecThreePhaseInverter
+----------
+The name of the StateType ({68e7239f-d7b2-4ab2-9cf3-e769fb5ddfc0}) of ThingClass sunspecSplitPhaseInverter
+----------
+The name of the StateType ({79bd1748-b540-467d-b6fa-b0cc56d9775a}) of ThingClass sunspecSinglePhaseInverter</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="339"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="342"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="345"/>
+        <source>DC power</source>
+        <extracomment>The name of the StateType ({1397d935-1206-4ceb-883d-1fcf41ba6214}) of ThingClass sunspecThreePhaseInverter
+----------
+The name of the StateType ({560b5ec8-1b2c-47d3-b55e-40f4d0aebfe0}) of ThingClass sunspecSplitPhaseInverter
+----------
+The name of the StateType ({852a8c28-b14d-492e-b2b3-f22219f4ed36}) of ThingClass sunspecSinglePhaseInverter</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="348"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="351"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="354"/>
+        <source>DC voltage</source>
+        <extracomment>The name of the StateType ({8c1c71c4-28fd-472a-83a6-3e96ab03d677}) of ThingClass sunspecThreePhaseInverter
+----------
+The name of the StateType ({d36bcaba-1e77-431e-89dc-af8ac6172d7d}) of ThingClass sunspecSplitPhaseInverter
+----------
+The name of the StateType ({157376b8-19ae-415f-b693-cb0a9ba88863}) of ThingClass sunspecSinglePhaseInverter</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="357"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="360"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="363"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="366"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="369"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="372"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="375"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="378"/>
+        <source>Device model</source>
+        <extracomment>The name of the ParamType (ThingClass: solarEdgeBattery, Type: thing, ID: {e90a3833-1eb6-43ed-a72a-0cf7cb8015ca})
+----------
+The name of the ParamType (ThingClass: sunspecStorage, Type: thing, ID: {2abf786d-18be-46cb-b4a3-7e0934a4c3fd})
+----------
+The name of the ParamType (ThingClass: sunspecThreePhaseMeter, Type: thing, ID: {00d308dc-e9a3-40e4-acad-3cad2ca3590f})
+----------
+The name of the ParamType (ThingClass: sunspecSplitPhaseMeter, Type: thing, ID: {6bc978cb-a779-4f5f-87a4-3cbbe2a55ca8})
+----------
+The name of the ParamType (ThingClass: sunspecSinglePhaseMeter, Type: thing, ID: {e31333c8-746d-4955-af0a-ae18d7100de7})
+----------
+The name of the ParamType (ThingClass: sunspecThreePhaseInverter, Type: thing, ID: {938b6555-e0af-4222-b85b-90bc1bc78c8f})
+----------
+The name of the ParamType (ThingClass: sunspecSplitPhaseInverter, Type: thing, ID: {d40b1b9d-994d-422c-8a41-b98cf03c1678})
+----------
+The name of the ParamType (ThingClass: sunspecSinglePhaseInverter, Type: thing, ID: {12f1b02c-033d-423f-a217-955ddb995dd5})</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="381"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="384"/>
+        <source>Discharging</source>
+        <extracomment>The name of the ParamType (ThingClass: sunspecStorage, ActionType: enableDischarging, ID: {bc99a159-815a-40ab-a6e8-b46f315305f7})
+----------
+The name of the StateType ({bc99a159-815a-40ab-a6e8-b46f315305f7}) of ThingClass sunspecStorage</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="387"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="390"/>
+        <source>Discharging rate</source>
+        <extracomment>The name of the ParamType (ThingClass: sunspecStorage, ActionType: dischargingRate, ID: {6068f030-acce-44a2-b95f-bd00dd5ca760})
+----------
+The name of the StateType ({6068f030-acce-44a2-b95f-bd00dd5ca760}) of ThingClass sunspecStorage</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="393"/>
+        <source>Enable charging</source>
+        <extracomment>The name of the ActionType ({1f530f79-c0d2-466b-90e1-79149e34d92f}) of ThingClass sunspecStorage</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="396"/>
+        <source>Enable discharging</source>
+        <extracomment>The name of the ActionType ({bc99a159-815a-40ab-a6e8-b46f315305f7}) of ThingClass sunspecStorage</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="399"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="402"/>
+        <source>Energy consumed phase A</source>
+        <extracomment>The name of the StateType ({cc0fd197-22ed-4461-8bba-47460396798a}) of ThingClass sunspecThreePhaseMeter
+----------
+The name of the StateType ({481b9895-1c3e-4e74-9418-ee51dae80a63}) of ThingClass sunspecSplitPhaseMeter</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="405"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="408"/>
+        <source>Energy consumed phase B</source>
+        <extracomment>The name of the StateType ({e928fde3-b35b-4884-9810-1cd083725e1c}) of ThingClass sunspecThreePhaseMeter
+----------
+The name of the StateType ({10245c6c-4b0d-44b4-be10-72026b842c86}) of ThingClass sunspecSplitPhaseMeter</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="411"/>
+        <source>Energy consumed phase C</source>
+        <extracomment>The name of the StateType ({2a12a991-d6c8-4665-bcc8-ea2685f7f0d4}) of ThingClass sunspecThreePhaseMeter</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="414"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="417"/>
+        <source>Energy produced phase A</source>
+        <extracomment>The name of the StateType ({fe7caa7e-cf37-4550-833e-7f9d35001fdd}) of ThingClass sunspecThreePhaseMeter
+----------
+The name of the StateType ({2dc76576-561c-4bce-8799-fadc55e84aee}) of ThingClass sunspecSplitPhaseMeter</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="420"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="423"/>
+        <source>Energy produced phase B</source>
+        <extracomment>The name of the StateType ({edbe64a5-121e-4c96-9dc8-bbc2a33dfdb7}) of ThingClass sunspecThreePhaseMeter
+----------
+The name of the StateType ({b1489efd-ece0-419e-ab1c-d3d25ab6b958}) of ThingClass sunspecSplitPhaseMeter</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="426"/>
+        <source>Energy produced phase C</source>
+        <extracomment>The name of the StateType ({a26790c0-7378-471c-80ba-67021352415d}) of ThingClass sunspecThreePhaseMeter</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="429"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="432"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="435"/>
+        <source>Error</source>
+        <extracomment>The name of the StateType ({4479af96-c499-4f15-abd6-4afdb18a9e09}) of ThingClass sunspecThreePhaseInverter
+----------
+The name of the StateType ({5cbfccc9-6afb-404c-a85e-e0323659a25f}) of ThingClass sunspecSplitPhaseInverter
+----------
+The name of the StateType ({49240259-d82a-4fe6-b3f5-1cd6a67c87a7}) of ThingClass sunspecSinglePhaseInverter</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="438"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="441"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="444"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="447"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="450"/>
+        <source>Frequency</source>
+        <extracomment>The name of the StateType ({66734fc7-b3e4-48d4-8cb7-f0a9f7cef88a}) of ThingClass sunspecThreePhaseMeter
+----------
+The name of the StateType ({db977c04-a3e1-436f-a0cd-9ce5b7bc6b89}) of ThingClass sunspecSplitPhaseMeter
+----------
+The name of the StateType ({3a2ce51d-7fa0-4188-bbd6-00d25de90e15}) of ThingClass sunspecSinglePhaseMeter
+----------
+The name of the StateType ({faa45cae-ed28-4150-9036-fceddf9d6776}) of ThingClass sunspecThreePhaseInverter
+----------
+The name of the StateType ({611df2ce-2b9c-49f3-9fa7-5706776e812c}) of ThingClass sunspecSinglePhaseInverter</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="453"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="456"/>
+        <source>Grid charging</source>
+        <extracomment>The name of the ParamType (ThingClass: sunspecStorage, ActionType: gridCharging, ID: {221a2ef6-0a92-4ff0-87fe-7bd920dbec0b})
+----------
+The name of the StateType ({221a2ef6-0a92-4ff0-87fe-7bd920dbec0b}) of ThingClass sunspecStorage</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="459"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="462"/>
+        <source>IP address</source>
+        <extracomment>The name of the ParamType (ThingClass: solarEdgeConnection, Type: thing, ID: {94f6ba3c-6b8b-47a9-a5cb-73a091ae4cf7})
+----------
+The name of the ParamType (ThingClass: sunspecConnection, Type: thing, ID: {6be6abc4-e2b2-4687-9343-0e5164ed0ab2})</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="465"/>
+        <source>Instantaneous current</source>
+        <extracomment>The name of the StateType ({89f58155-ca0c-48a8-aa7f-6e4d1b1bad36}) of ThingClass solarEdgeBattery</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="468"/>
+        <source>Instantaneous power</source>
+        <extracomment>The name of the StateType ({caccf9fd-0f83-4dd5-ae48-a497f13d2a2e}) of ThingClass solarEdgeBattery</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="471"/>
+        <source>Instantaneous voltage</source>
+        <extracomment>The name of the StateType ({9d17defb-fc6e-4c10-af53-14b796222a14}) of ThingClass solarEdgeBattery</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="474"/>
+        <source>Line frequency</source>
+        <extracomment>The name of the StateType ({874f5e4a-a009-4c28-b211-2af90a24b2ac}) of ThingClass sunspecSplitPhaseInverter</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="477"/>
+        <source>Line to Neutral AC Voltage</source>
+        <extracomment>The name of the StateType ({0ac79508-07c3-4d01-97a3-6edf121bdf32}) of ThingClass sunspecSplitPhaseMeter</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="480"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="483"/>
+        <source>MAC address</source>
+        <extracomment>The name of the ParamType (ThingClass: solarEdgeConnection, Type: thing, ID: {bb395c12-54d6-4139-b0a6-e31b28bc4d2e})
+----------
+The name of the ParamType (ThingClass: sunspecConnection, Type: thing, ID: {f65d6c36-1672-44cb-b52a-62d71837ae67})</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="486"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="489"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="492"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="495"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="498"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="501"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="504"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="507"/>
+        <source>Manufacturer</source>
+        <extracomment>The name of the ParamType (ThingClass: solarEdgeBattery, Type: thing, ID: {8a4b19a9-ee14-42aa-9146-fa84e15970ee})
+----------
+The name of the ParamType (ThingClass: sunspecStorage, Type: thing, ID: {7ee31b97-caec-4cdb-80c9-71e232c5fb22})
+----------
+The name of the ParamType (ThingClass: sunspecThreePhaseMeter, Type: thing, ID: {462552de-af84-4893-9132-81c1adce67ad})
+----------
+The name of the ParamType (ThingClass: sunspecSplitPhaseMeter, Type: thing, ID: {ecbdee01-8be7-42bf-9e1a-a0f700669b09})
+----------
+The name of the ParamType (ThingClass: sunspecSinglePhaseMeter, Type: thing, ID: {811de380-848a-448c-8446-daa0e0fd8e50})
+----------
+The name of the ParamType (ThingClass: sunspecThreePhaseInverter, Type: thing, ID: {640b71ba-2ccd-40d6-bf45-8271a9046f81})
+----------
+The name of the ParamType (ThingClass: sunspecSplitPhaseInverter, Type: thing, ID: {c2c35b68-1c0f-47cc-b09f-49d9cf67c0ff})
+----------
+The name of the ParamType (ThingClass: sunspecSinglePhaseInverter, Type: thing, ID: {5fbb0b62-e0f9-4aee-aba7-fd00ae8b0a5d})</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="510"/>
+        <source>Maximum energy</source>
+        <extracomment>The name of the StateType ({d8cc799d-9709-4342-8766-52ff5f12aecc}) of ThingClass solarEdgeBattery</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="513"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="516"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="519"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="522"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="525"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="528"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="531"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="534"/>
+        <source>Modbus address</source>
+        <extracomment>The name of the ParamType (ThingClass: solarEdgeBattery, Type: thing, ID: {7413cce6-48c1-4924-89bc-915beed67b57})
+----------
+The name of the ParamType (ThingClass: sunspecStorage, Type: thing, ID: {3f107844-00c5-4f39-86e5-485b3d1f5c1a})
+----------
+The name of the ParamType (ThingClass: sunspecThreePhaseMeter, Type: thing, ID: {6d5dbd35-1bf6-46db-bee9-90c679421b89})
+----------
+The name of the ParamType (ThingClass: sunspecSplitPhaseMeter, Type: thing, ID: {a56f198d-ed86-429f-b839-8e11a32da8c1})
+----------
+The name of the ParamType (ThingClass: sunspecSinglePhaseMeter, Type: thing, ID: {30b90ec0-429b-4e6c-88e9-155aa4bcad47})
+----------
+The name of the ParamType (ThingClass: sunspecThreePhaseInverter, Type: thing, ID: {e5465ede-9d3d-4558-b614-40dda743ddae})
+----------
+The name of the ParamType (ThingClass: sunspecSplitPhaseInverter, Type: thing, ID: {37582a96-f2f2-4845-abef-973c7dd0ad57})
+----------
+The name of the ParamType (ThingClass: sunspecSinglePhaseInverter, Type: thing, ID: {26ae9050-7090-453a-85a3-307bfebe6fed})</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="537"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="540"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="543"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="546"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="549"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="552"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="555"/>
+        <source>Model</source>
+        <extracomment>The name of the ParamType (ThingClass: sunspecStorage, Type: thing, ID: {219beb96-b9fe-4dd2-a386-ecfbbab8786d})
+----------
+The name of the ParamType (ThingClass: sunspecThreePhaseMeter, Type: thing, ID: {a1960821-155c-4176-86fa-974429039182})
+----------
+The name of the ParamType (ThingClass: sunspecSplitPhaseMeter, Type: thing, ID: {89aeec6d-abeb-48b5-9594-214ad5db2d03})
+----------
+The name of the ParamType (ThingClass: sunspecSinglePhaseMeter, Type: thing, ID: {7d6fcafb-c62e-4a21-aae2-f4041c487149})
+----------
+The name of the ParamType (ThingClass: sunspecThreePhaseInverter, Type: thing, ID: {8d5b2b58-ce46-406d-844e-f53136afcf09})
+----------
+The name of the ParamType (ThingClass: sunspecSplitPhaseInverter, Type: thing, ID: {c42fb50e-210f-4b53-88eb-fa216e15f88f})
+----------
+The name of the ParamType (ThingClass: sunspecSinglePhaseInverter, Type: thing, ID: {41715d00-a947-4f43-a475-cea05790e01d})</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="558"/>
+        <source>Number of retries</source>
+        <extracomment>The name of the ParamType (ThingClass: sunSpec, Type: plugin, ID: {9a4bfe01-315f-4ee7-98a9-f16b08ba12ad})</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="561"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="564"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="567"/>
+        <source>Operating state</source>
+        <extracomment>The name of the StateType ({cebdce98-42d1-4a28-8834-8960efc0e83f}) of ThingClass sunspecThreePhaseInverter
+----------
+The name of the StateType ({6c1e2929-bc9a-4ce9-a405-6df2633a5131}) of ThingClass sunspecSplitPhaseInverter
+----------
+The name of the StateType ({47543a7f-425f-406b-a458-b79c36b65f6c}) of ThingClass sunspecSinglePhaseInverter</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="570"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="573"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="576"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="579"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="582"/>
+        <source>Phase A current</source>
+        <extracomment>The name of the StateType ({46ae5c40-f389-4f7e-a59f-8947d7dc9f3f}) of ThingClass sunspecThreePhaseMeter
+----------
+The name of the StateType ({e8c0f4bf-a704-46f2-80a0-cf490bd7871b}) of ThingClass sunspecSplitPhaseMeter
+----------
+The name of the StateType ({4a058e36-0b45-4388-9a26-0615f7aafa0d}) of ThingClass sunspecSinglePhaseMeter
+----------
+The name of the StateType ({3140ccd3-40cf-46c8-8bb2-8c3ea4582f84}) of ThingClass sunspecThreePhaseInverter
+----------
+The name of the StateType ({be7b86b4-aeeb-49ba-9b6b-9792dceed6b5}) of ThingClass sunspecSplitPhaseInverter</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="585"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="588"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="591"/>
+        <source>Phase A voltage</source>
+        <extracomment>The name of the StateType ({4ff342de-f0b7-475a-99e4-3a926326d1b7}) of ThingClass sunspecThreePhaseMeter
+----------
+The name of the StateType ({1bd7e53e-abf8-4d62-b87c-2c84c283567b}) of ThingClass sunspecSplitPhaseMeter
+----------
+The name of the StateType ({5e7a65a5-b740-4395-87fa-ffbe8fe1c823}) of ThingClass sunspecSinglePhaseMeter</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="594"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="597"/>
+        <source>Phase AN voltage</source>
+        <extracomment>The name of the StateType ({f08521aa-9c38-4c31-95e1-acb616f6e9c6}) of ThingClass sunspecThreePhaseInverter
+----------
+The name of the StateType ({17c24cfc-cb41-4873-82b4-19a20d6be146}) of ThingClass sunspecSplitPhaseInverter</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="600"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="603"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="606"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="609"/>
+        <source>Phase B current</source>
+        <extracomment>The name of the StateType ({efc75436-ac51-4fee-81f1-65a726416980}) of ThingClass sunspecThreePhaseMeter
+----------
+The name of the StateType ({4281f6fc-d5a0-4a22-ac61-6bec88efbc80}) of ThingClass sunspecSplitPhaseMeter
+----------
+The name of the StateType ({7ea1a53a-6fd9-4914-8283-b57aa1aaaebf}) of ThingClass sunspecThreePhaseInverter
+----------
+The name of the StateType ({fc5df18d-cf2f-4944-97b7-e57dabef8778}) of ThingClass sunspecSplitPhaseInverter</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="612"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="615"/>
+        <source>Phase B voltage</source>
+        <extracomment>The name of the StateType ({cc8434f1-02fe-41ad-bc8a-94e57293f8fc}) of ThingClass sunspecThreePhaseMeter
+----------
+The name of the StateType ({377b5279-ddb6-451d-8377-a9389c749393}) of ThingClass sunspecSplitPhaseMeter</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="618"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="621"/>
+        <source>Phase BN voltage</source>
+        <extracomment>The name of the StateType ({739b8805-d522-4406-bede-d1e4200a3aa9}) of ThingClass sunspecThreePhaseInverter
+----------
+The name of the StateType ({f8645ee2-a1e6-4d09-8c20-f6fd02a9e896}) of ThingClass sunspecSplitPhaseInverter</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="624"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="627"/>
+        <source>Phase C current</source>
+        <extracomment>The name of the StateType ({618cbcc5-2efe-49d2-9c5c-53fb3eaa3a9d}) of ThingClass sunspecThreePhaseMeter
+----------
+The name of the StateType ({aa4b4cf5-43d0-4be5-9505-403918b5371d}) of ThingClass sunspecThreePhaseInverter</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="630"/>
+        <source>Phase C voltage</source>
+        <extracomment>The name of the StateType ({fbd673cf-8891-4aef-b112-2829f5fcfe06}) of ThingClass sunspecThreePhaseMeter</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="633"/>
+        <source>Phase CN voltage</source>
+        <extracomment>The name of the StateType ({949b797d-5566-4667-8982-e430d23548e2}) of ThingClass sunspecThreePhaseInverter</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="636"/>
+        <source>Phase voltage</source>
+        <extracomment>The name of the StateType ({4ca086e9-82b9-461c-b168-1d61b542b884}) of ThingClass sunspecSinglePhaseInverter</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="639"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="642"/>
+        <source>Port</source>
+        <extracomment>The name of the ParamType (ThingClass: solarEdgeConnection, Type: thing, ID: {1bcede48-d167-4ced-8f1b-bea6302dd43f})
+----------
+The name of the ParamType (ThingClass: sunspecConnection, Type: thing, ID: {1fa4fc9c-f6be-47c7-928a-bcefc1142eec})</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="645"/>
+        <source>Rated energy</source>
+        <extracomment>The name of the StateType ({f6c6f548-8a12-4a62-a641-08bb003c55fa}) of ThingClass solarEdgeBattery</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="648"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="651"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="654"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="657"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="660"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="663"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="666"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="669"/>
+        <source>Serial number</source>
+        <extracomment>The name of the ParamType (ThingClass: solarEdgeBattery, Type: thing, ID: {efd99fe4-3a48-4208-829d-14e062015ee7})
+----------
+The name of the ParamType (ThingClass: sunspecStorage, Type: thing, ID: {5cf43b80-3e65-4f69-8bf5-91810da0ead4})
+----------
+The name of the ParamType (ThingClass: sunspecThreePhaseMeter, Type: thing, ID: {97bbcc98-f4ec-4060-bac2-31b40720862c})
+----------
+The name of the ParamType (ThingClass: sunspecSplitPhaseMeter, Type: thing, ID: {fb7cc04b-91cb-4f3d-a444-201cca57934a})
+----------
+The name of the ParamType (ThingClass: sunspecSinglePhaseMeter, Type: thing, ID: {581fa623-0005-448f-a5b1-8db1043795a3})
+----------
+The name of the ParamType (ThingClass: sunspecThreePhaseInverter, Type: thing, ID: {ee169df5-475c-4dfb-870a-0785899b7dc1})
+----------
+The name of the ParamType (ThingClass: sunspecSplitPhaseInverter, Type: thing, ID: {8afdd256-0393-4610-9477-7c4541c92ffe})
+----------
+The name of the ParamType (ThingClass: sunspecSinglePhaseInverter, Type: thing, ID: {59b85218-f144-4ce8-95f7-19a1dc2e2a8d})</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="672"/>
+        <source>Set charging rate</source>
+        <extracomment>The name of the ActionType ({7f469bbc-64a5-4045-8d5f-9a1a85039851}) of ThingClass sunspecStorage</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="675"/>
+        <source>Set discharging rate</source>
+        <extracomment>The name of the ActionType ({6068f030-acce-44a2-b95f-bd00dd5ca760}) of ThingClass sunspecStorage</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="678"/>
+        <source>Set grid charging</source>
+        <extracomment>The name of the ActionType ({221a2ef6-0a92-4ff0-87fe-7bd920dbec0b}) of ThingClass sunspecStorage</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="681"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="684"/>
+        <source>Slave ID</source>
+        <extracomment>The name of the ParamType (ThingClass: solarEdgeConnection, Type: thing, ID: {b9cc58cf-ad15-447a-a94d-17b9204313bc})
+----------
+The name of the ParamType (ThingClass: sunspecConnection, Type: thing, ID: {953064e0-4675-4538-a9a2-fa22ce2f347c})</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="687"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="690"/>
+        <source>SolarEdge</source>
+        <extracomment>The name of the ThingClass ({7a92bf65-b443-4491-a012-2bec35eb5bf0})
+----------
+The name of the vendor ({addd7dd8-13e1-405b-ba61-b2d82eaf0426})</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="693"/>
+        <source>SolarEdge battery</source>
+        <extracomment>The name of the ThingClass ({7900471a-da3f-4f03-98be-3e3d9c841546})</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="696"/>
+        <source>State of health (SOH)</source>
+        <extracomment>The name of the StateType ({24b501db-f301-422d-ad58-f16ca025f6ee}) of ThingClass solarEdgeBattery</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="699"/>
+        <source>Status</source>
+        <extracomment>The name of the StateType ({da2b19c5-0f48-49d1-93f0-abdc0051407d}) of ThingClass sunspecStorage</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="702"/>
+        <source>SunSpec</source>
+        <extracomment>The name of the vendor ({c143a7b4-a16c-4fff-86a3-9ffab3d6841d})</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="705"/>
+        <source>SunSpec Generic</source>
+        <extracomment>The name of the ThingClass ({f51853f3-8815-4cf3-b337-45cda1f3e6d5})</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="708"/>
+        <source>SunSpec Storage</source>
+        <extracomment>The name of the ThingClass ({9a643ba8-346c-4127-a2f8-956a7133d75e})</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="711"/>
+        <source>SunSpec single phase inverter</source>
+        <extracomment>The name of the ThingClass ({c5d5204e-3375-4b92-8128-fab77a671fed})</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="714"/>
+        <source>SunSpec single phase meter</source>
+        <extracomment>The name of the ThingClass ({7ffa43b8-b56f-4435-8509-980e9d81dfa8})</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="717"/>
+        <source>SunSpec split phase inverter</source>
+        <extracomment>The name of the ThingClass ({61b38f93-d331-42bf-b1ef-d3fb16ad1230})</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="720"/>
+        <source>SunSpec split phase meter</source>
+        <extracomment>The name of the ThingClass ({b8a18e45-5ff5-4f43-915f-04ee216c809d})</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="723"/>
+        <source>SunSpec three phase inverter</source>
+        <extracomment>The name of the ThingClass ({2e4122ea-96a5-415c-b5e2-7d6012265a83})</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="726"/>
+        <source>SunSpec three phase meter</source>
+        <extracomment>The name of the ThingClass ({68f822f9-ff30-4275-b229-39a3674fead7})</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="729"/>
+        <source>Timout</source>
+        <extracomment>The name of the ParamType (ThingClass: sunSpec, Type: plugin, ID: {1a8895a0-c746-48af-9307-3a4636f24cc2})</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="732"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="735"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="738"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="741"/>
+        <source>Total AC current</source>
+        <extracomment>The name of the StateType ({e85024af-5376-4ff1-813e-5a56990c11cc}) of ThingClass sunspecSplitPhaseMeter
+----------
+The name of the StateType ({26560dd8-6de4-445e-ba55-391d7241c370}) of ThingClass sunspecThreePhaseInverter
+----------
+The name of the StateType ({9dbd8da7-dc22-4c3a-b941-47520fde705f}) of ThingClass sunspecSplitPhaseInverter
+----------
+The name of the StateType ({f02d1c99-9b43-45a6-8a06-2ed4d6e5d497}) of ThingClass sunspecSinglePhaseInverter</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="744"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="747"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="750"/>
+        <source>Total real energy exported</source>
+        <extracomment>The name of the StateType ({01a69b2c-cc96-4925-9b1c-a2f204ef0837}) of ThingClass sunspecThreePhaseMeter
+----------
+The name of the StateType ({8a63bd73-0546-4636-8da2-23238cc06fb2}) of ThingClass sunspecSplitPhaseMeter
+----------
+The name of the StateType ({ba275bdf-f418-4ef0-afbe-ac425c6f6783}) of ThingClass sunspecSinglePhaseMeter</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="753"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="756"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="759"/>
+        <source>Total real energy imported</source>
+        <extracomment>The name of the StateType ({0a98b229-7625-4811-8bf8-ed22be2db3fb}) of ThingClass sunspecThreePhaseMeter
+----------
+The name of the StateType ({51ffb2ae-3920-40df-8290-bbf5b6e1a68f}) of ThingClass sunspecSplitPhaseMeter
+----------
+The name of the StateType ({c51dc6cb-5c05-4078-b11a-26afb2f85541}) of ThingClass sunspecSinglePhaseMeter</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="762"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="765"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="768"/>
+        <source>Total real power</source>
+        <extracomment>The name of the StateType ({47780b0a-68b7-46c3-bb98-79ec9a57fd69}) of ThingClass sunspecThreePhaseMeter
+----------
+The name of the StateType ({ef4bc0f8-f516-49b7-aba8-d5f987485aca}) of ThingClass sunspecSplitPhaseMeter
+----------
+The name of the StateType ({93cf8c6a-2620-42ed-9070-e0726d7b1dbc}) of ThingClass sunspecSinglePhaseMeter</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="771"/>
+        <source>Update interval</source>
+        <extracomment>The name of the ParamType (ThingClass: sunSpec, Type: plugin, ID: {52da5222-9a94-47a2-9adc-004541d2f5ed})</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="774"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="777"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="780"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="783"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="786"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="789"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="792"/>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="795"/>
+        <source>Version</source>
+        <extracomment>The name of the StateType ({db2e0304-4f0e-461f-8bab-c63fcb5deb1b}) of ThingClass solarEdgeBattery
+----------
+The name of the StateType ({fca0c151-d8fa-4d6e-a5d7-b3bc965abc09}) of ThingClass sunspecStorage
+----------
+The name of the StateType ({3d908dd2-4a93-4b62-8cbb-2fa9ef4d28fa}) of ThingClass sunspecThreePhaseMeter
+----------
+The name of the StateType ({85c5087c-77b4-4ac8-bdff-020f6242bd57}) of ThingClass sunspecSplitPhaseMeter
+----------
+The name of the StateType ({94adff6f-f672-4e4e-a72c-cd6cd7e8721a}) of ThingClass sunspecSinglePhaseMeter
+----------
+The name of the StateType ({3b543b60-d8f6-4bc0-a79f-cb9cb20e4bb8}) of ThingClass sunspecThreePhaseInverter
+----------
+The name of the StateType ({2986cac4-f4ac-4299-ac9e-48339e2a54ef}) of ThingClass sunspecSplitPhaseInverter
+----------
+The name of the StateType ({f4439de3-a461-42d6-b4c9-aa35f696a420}) of ThingClass sunspecSinglePhaseInverter</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../build-nymea-plugins-modbus-Desktop-Debug/sunspec/plugininfo.h" line="798"/>
+        <source>sunspec</source>
+        <extracomment>The name of the plugin SunSpec ({cb4bdec6-cf2c-4a0f-9709-42d951ca2d8b})</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+</TS>

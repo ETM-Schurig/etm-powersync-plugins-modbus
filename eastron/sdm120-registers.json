@@ -1,0 +1,89 @@
+{
+    "className": "Sdm120",
+    "protocol": "RTU",
+    "endianness": "BigEndian",
+    "errorLimitUntilNotReachable": 15,
+    "checkReachableRegister": "activePower",
+    "registers": [
+        {
+            "id": "voltage",
+            "address": 0,
+            "size": 2,
+            "type": "float",
+            "registerType": "inputRegister",
+            "readSchedule": "update",
+            "description": "Voltage",
+            "unit": "V",
+            "defaultValue": "0",
+            "access": "RO"
+        },
+        {
+            "id": "current",
+            "address": 6,
+            "size": 2,
+            "type": "float",
+            "registerType": "inputRegister",
+            "readSchedule": "update",
+            "description": "Current",
+            "unit": "A",
+            "defaultValue": "0",
+            "access": "RO"
+        },
+        {
+            "id": "activePower",
+            "address": 12,
+            "size": 2,
+            "type": "float",
+            "registerType": "inputRegister",
+            "readSchedule": "update",
+            "description": "Active power",
+            "unit": "W",
+            "defaultValue": "0",
+            "access": "RO"
+        }
+    ],
+    "blocks": [
+        {
+            "id": "frequencyAndTotalEnergy",
+            "readSchedule": "update",
+            "registers": [
+                {
+                    "id": "frequency",
+                    "address": 70,
+                    "size": 2,
+                    "type": "float",
+                    "registerType": "inputRegister",
+                    "readSchedule": "update",
+                    "description": "Frequency",
+                    "unit": "Hz",
+                    "defaultValue": "0",
+                    "access": "RO"
+                },
+                {
+                    "id": "totalEnergyConsumed",
+                    "address": 72,
+                    "size": 2,
+                    "type": "float",
+                    "registerType": "inputRegister",
+                    "readSchedule": "update",
+                    "description": "Total import active energy",
+                    "unit": "kWh",
+                    "defaultValue": "0",
+                    "access": "RO"
+                },
+                {
+                    "id": "totalEnergyProduced",
+                    "address": 74,
+                    "size": 2,
+                    "type": "float",
+                    "registerType": "inputRegister",
+                    "readSchedule": "update",
+                    "description": "Total export active energy",
+                    "unit": "kWh",
+                    "defaultValue": "0",
+                    "access": "RO"
+                }
+            ]
+        }
+    ]
+}

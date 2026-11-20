@@ -1,0 +1,20 @@
+.qmake.stash
+Makefile
+*.o
+moc_*
+*plugininfo.h
+*.so
+build/
+builddir/
+build-*/
+
+# Local sysroot for libnymea-sunspec-dev (the .deb extracted outside the system
+# installation). Build artefact, never versioned.
+.sunspec-sysroot/
+
+# Internal design document, copied locally to work with and not
+# versioned in this repository.
+sunspec/CONTRAT-fronius-sunspec.md
+
+# Qt Creator session file: local absolute paths, specific to each workstation.
+*.pro.user

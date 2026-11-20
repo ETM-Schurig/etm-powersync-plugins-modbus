@@ -1,0 +1,13 @@
+{
+    "title": "Eastron",
+    "tagline": "Connect Eastron SDM energy meters via Modbus RTU.",
+    "icon": "eastron.jpg",
+    "stability": "consumer",
+    "offline": true,
+    "technologies": [
+        "modbus"
+    ],
+    "categories": [
+        "energy"
+    ]
+}

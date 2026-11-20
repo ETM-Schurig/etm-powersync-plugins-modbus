@@ -1,0 +1,400 @@
+etm-powersync-plugins-modbus (1.15.2+etm17) trixie; urgency=medium
+
+  * debian: the Modbus V2C plugin package is renamed powersync-plugin-modbus-v2c.
+
+    The name powersync-plugin-v2c goes to the V2C plugin over the charger's
+    local HTTP API (etm-powersync-plugins). The new package takes over the
+    files of powersync-plugin-v2c (<< 1.15.2+etm17) through Replaces/Breaks;
+    the plugin itself, its identifiers and the things already set up are
+    unchanged.
+
+ -- Patrick Schurig <etm.schurig@gmail.com>  Wed, 28 Oct 2026 08:30:00 +0100
+
+etm-powersync-plugins-modbus (1.15.2+etm16) trixie; urgency=medium
+
+  * sunspec: a Fronius battery added after the inverter is no longer dropped.
+
+    The duplicate guard compared serial numbers only. A storage model 124
+    shares the Common block of its inverter, so it carries the same serial and
+    was refused as a duplicate once the inverter child existed. The guard now
+    compares the kind of model as well (inverter, meter, storage).
+
+  * sunspec: the Fronius storage publishes its energy totals.
+
+    totalEnergyConsumed / totalEnergyProduced come from DCWH of the StCha /
+    StDisCha blocks of model 160. Nothing is published while the blocks are
+    invalid, so the totals never step back to zero.
+
+  * sunspec: new storage action "Block battery discharge" (setDischargeBlocked).
+
+    One ordered, read-back plan: StorCtl_Mod and OutWRte for NO_DISCHARGE or
+    NORMAL, the revert timer written last. If the first write fails, nothing
+    else is written. The enableDischarging and dischargingRate actions are
+    unchanged.
+
+  * sunspec: enableDischarging / enableCharging are named after what they do.
+
+    The bits of StorCtl_Mod activate a limit: true means "limit active". The
+    labels now read "Discharge limit active" / "Charge limit active". State
+    names and ids are unchanged.
+
+  * sunspec: Fronius storage revert timer at first install, and its guard.
+
+    A storage created during the first setup of a Fronius connection received
+    revertTime 0 instead of 300. It now gets 300 on every path. A setpoint that
+    limits a Fronius storage whose revert time is 0 is refused with a message
+    and nothing is written; releasing the battery is always accepted. An
+    existing storage stored with 0 keeps it until it is changed.
+
+  * tools: qualifier-borne.sh requires the SSH user and bounds its capture.
+
+    No default user any more. The journal capture stops by itself after a
+    duration (-d, default 45m), bounded on the remote side as well.
+
+  * Public repository cleanup: comments, specs and test notes no longer refer
+    to test installations or to unpublished notes. Executed code unchanged.
+
+ -- Patrick Schurig <etm.schurig@gmail.com>  Sun, 25 Oct 2026 09:45:00 +0100
+
+etm-powersync-plugins-modbus (1.15.2+etm15) trixie; urgency=medium
+
+  * eastron: the SDM72 grid meter counts import and export in net.
+
+    The SDM72D-M counts its energy registers 30073 / 30075 phase by phase: a
+    phase exporting PV while the two others draw makes the export register
+    climb although the house exports nothing in net. The sdm72 thing now
+    publishes, in totalEnergyConsumed / totalEnergyProduced, two indexes
+    integrated from the signed total power (register 52). New setting
+    netMetering, on by default, also on for already paired things. Indexes are
+    seeded on 30073 / 30075 (no step in the energy totals), saved every 60 s
+    and at clean shutdown, and never integrated across more than 10 s or a
+    disconnection. Raw registers 30073, 30075 and 30397 stay readable in their
+    own states. SDM630, SDM120 and the consumer / producer classes unchanged.
+
+ -- Patrick Schurig <etm.schurig@gmail.com>  Sat, 17 Oct 2026 14:01:45 +0200
+
+etm-powersync-plugins-modbus (1.15.2+etm14) trixie; urgency=medium
+
+  * v2c: the charger now declares smartmeterconsumer, so it has a power history.
+
+    Until now the trydan class declared only evcharger + connectable. That kept
+    it out of EnergyManagerImpl::watchThing(), which wires a Thing into the
+    energy log only if it declares energymeter, smartmeterconsumer,
+    smartmeterproducer or energystorage. Energy.GetThingPowerLogs did not reject
+    the request -- it simply returned no rows for that thingId, and the app
+    listed the charger as "no history" while its instantaneous power was
+    perfectly readable. Two chargers side by side, only one with a past.
+
+    smartmeterconsumer requires totalEnergyConsumed, which the charger does not
+    provide: there is no lifetime counter anywhere in the Modbus map, and
+    ChargeEnergy (0x0BC4) is wiped on every charge stop. So it is BUILT, like
+    sessionEnergy, from the same increments -- and now through the same single
+    rule, incrementEnergie(), shared by both counters so that a correction can
+    never apply to only one of them. Unlike sessionEnergy it never resets and
+    has no session condition, so a charge started by hand on the charger,
+    outside HEMS control, is counted too.
+
+    This had been held back on "must be monotonic for life". That was too
+    strict, and checked: the engine keeps its own counter, syncs onto the first
+    value without adding it to its diff, and explicitly re-syncs when a Thing's
+    counter goes backwards. A loss on the plugin side can neither inject
+    negative consumption downstream nor erase the log already written. The real
+    requirement is "never rewind during a run", which the cached state plus the
+    baseline re-read from chargeEnergy at setup delivers.
+
+    NOTE: on an already-paired Thing, things.conf overrides the logged:true the
+    interface carries for currentPower/totalEnergyConsumed. The engine's energy
+    log does not depend on that setting -- the curve works without touching it.
+
+  * v2c: the lower current bound now reads RegMinIntensity, like the upper one.
+
+    executeAction clamped the top end with master->maxIntensity() but the bottom
+    end with a literal 6.0, so a charger declaring an 8 A minimum would have been
+    sent a 7 A setpoint written as-is. Both ends now go through
+    courantMinimalEffectif() / courantMaximalEffectif(), which take the stricter
+    of the charger's declared bound and the IEC 61851 floor -- a misread 0 must
+    not open the way to a 3 A setpoint. The same pair feeds setStateMinMaxValues,
+    so the app slider and the action agree; letting them diverge would offer a
+    value the action turns into a pause.
+
+ -- Patrick Schurig <etm.schurig@gmail.com>  Tue, 08 Sep 2026 10:46:04 +0200
+
+etm-powersync-plugins-modbus (1.15.2+etm13) trixie; urgency=medium
+
+  * v2c: sessionEnergy is now BUILT by the plugin, not wired to a register.
+
+    The Trydan publishes no session energy. Its ChargeEnergy counter (0x0BC4)
+    is accurate -- integrating it matches currentPower to better than one
+    percent, twice over -- but it is not conserved: the firmware zeroes it on
+    every CHARGE STOP, cable still plugged in. Measured cycle: stop at t+1 s,
+    zeroed at t+8 s, unplug only at t+127 s. The trigger is the stop, not the
+    unplug.
+
+    That makes it our problem, not the firmware's: under surplus control it is
+    our own arbitration that cuts when the sun is briefly hidden. The HEMS
+    would erase its own measurement several times a day, and an overnight
+    charge read back at 07:00 would be 0 -- "nothing delivered", which LM-1009
+    condition C1 forbids displaying.
+
+    The plugin accumulates the increments before each reset. In the plugin and
+    not in the engine: the plugin polls at 30 s, the engine at one minute, so an
+    increment erased between two engine reads would be invisible to it. Reset
+    happens when a session OPENS, never when it closes, so the total stays
+    readable in the morning once the car has gone. Unplug is confirmed over 3
+    SUCCESSFUL polls; failed polls are not counted, so a WiFi outage freezes the
+    absence counter instead of advancing it. State survives a nymead restart via
+    two cached states plus a transition-only flag in pluginStorage().
+
+    chargeEnergy stays published alongside under its exact name -- the raw
+    charger counter next to the built quantity. Only its displayName changes.
+
+  * v2c: registers 0x0BD9-0x0BDB carry AMPERES, not watts.
+
+    V2C's sheet labels them "Power_L1/L2/L3". Measured: a 6 A setpoint reads
+    5.9-6.0, a 10 A setpoint reads 9.x-10. At 230 V a phase power would be
+    ~1380 W, not 5.9. Published as Watt, the app showed "5.9 W" where the
+    charger says "5.9 A". States renamed currentL1/L2/L3, unit Ampere; the
+    UUIDs do NOT change, as the identifier always carried amperes -- it was the
+    name that lied. Side benefit: per-phase imbalance, which no other charger in
+    the catalogue provides, useful for the per-phase overload ceiling
+    (LM-1006-1).
+
+ -- Patrick Schurig <etm.schurig@gmail.com>  Fri, 28 Aug 2026 14:30:00 +0200
+
+etm-powersync-plugins-modbus (1.15.2+etm12) trixie; urgency=medium
+
+  * v2c: the Trydan now declares phaseCount, and it is ENTERED at pairing.
+
+    There is no phase register anywhere in the V2C Modbus map (0x0BC2-0x0BD5,
+    0x177A-0x1783): the charger cannot tell whether it is wired single or three
+    phase. The thing class did not declare phaseCount either, and the energy
+    engine's fallback for a missing state is SILENT -- EvCharger::phaseCount()
+    returns 1. On a three-phase Trydan that publishes a 1380 W floor instead of
+    4140 (6 A x 230 V x 1 instead of x 3) and converts an allocated envelope
+    into a current three times too high. The charger starts, at the wrong
+    current, with nothing in any log to say so.
+
+    That is the same defect family the energy plugin closed in 3g-2 -- a floor
+    that is announced but is not the one governing the start -- reopened on the
+    plugin side. Found the evening before the charger was due on the wall, by
+    reading the class declaration rather than by running it.
+
+    The value therefore comes from a SETTING (1 or 3, default 1), mirrored into
+    the state the engine reads, and re-applied on settingChanged so a rewired
+    charger can be corrected without recreating the thing. Default 1 matches the
+    engine's own fallback, so an installation that never sets it behaves exactly
+    as it did before this change.
+
+    The state carries minValue 1 / maxValue 3: the nymea evcharger interface
+    defines phaseCount with those bounds, and the plugin validator rejects the
+    class without them. Conforming means the engine reads it through the
+    interface, not through a plugin-specific convention.
+
+  * v2c: still no sessionEnergy, deliberately. ChargeEnergy (0x0BC4) stays a
+    diagnostic state -- see evcc-io/evcc#28047. To be
+    re-examined with the charger and a reference meter in hand.
+
+ -- Patrick Schurig <etm.schurig@gmail.com>  Thu, 27 Aug 2026 15:20:00 +0200
+
+etm-powersync-plugins-modbus (1.15.2+etm11) trixie; urgency=medium
+
+  * sunspec: stop warning about a missing battery channel on a machine that has
+    simply not been read yet. libnymea-sunspec creates the repeating blocks of a
+    model from initFinished, which fires during the FIRST block read, just
+    before blockUpdated. On that first signal the blocks exist but carry no
+    data: every IDStr is empty, nothing classifies, and hasBatteryBlocks()
+    answered false about an inverter whose StCha/StDisCha blocks were there all
+    along. Observed in testing: the warning fired once at startup
+    on a storage whose currentPower then tracked the battery correctly through
+    charge, discharge and rest.
+    What that false positive cost is not noise. The README tells operations to
+    grep that exact line first to tell a broken storage from an unmeasurable
+    one; a line that appears at every healthy start tells them nothing. The two
+    questions are now asked separately - blocksAreIdentified() before
+    hasBatteryBlocks() - and the warning waits for the next refresh instead.
+
+ -- Patrick Schurig <patrick@etm-schurig.eu>  Wed, 26 Aug 2026 16:10:00 +0200
+
+etm-powersync-plugins-modbus (1.15.2+etm10) trixie; urgency=medium
+
+  * sunspec: make the SunSpec storage visible to the energy engine. The
+    sunspecStorage thing class declared "battery" but not "energystorage", so
+    the three consumers that filter by that interface never found it: nymea's
+    power balance (currentPowerStorage, the figure the customer reads on their
+    dashboard), the storage reserve of the EV surplus charging, and the reserve
+    of the whole waterfall. Observed on a test installation: GetPowerBalance
+    answering currentPowerStorage 0 while the battery reported 50 % and
+    "Holding". It was not at zero, it was invisible.
+  * sunspec: publish currentPower and capacity on the storage, wired to
+    registers rather than declared empty. Model 124 carries no power at all -
+    WChaMax is a maximum, StorAval is in amp hours - so the instantaneous power
+    is read from model 160, whose StCha and StDisCha blocks each carry an
+    unsigned DCW with the inactive one at zero. currentPower is therefore
+    DCW[StCha] - DCW[StDisCha], positive when charging, per the convention of
+    libnymea/interfaces/energystorage.json. capacity comes from WHRtg of the
+    nameplate model 120, and is left alone rather than zeroed when the
+    nameplate does not implement it.
+  * sunspec: the sign is measured, not deduced. Read only on a test
+    installation with the battery power driven externally: a +2000 W charge
+    order gives StCha 2000 W, StDisCha 0 W and ChaSt Charging; a -1500 W
+    discharge order gives StCha 0 W, StDisCha 1500 W and ChaSt Discharging.
+    The same run showed DCW_SF moving from -2 to -1 between idle and load,
+    which is why the scale factor is never cached across a poll.
+  * sunspec: warn once per thing when a storage has no power source - no model
+    160 on its connection, or a model 160 with no StCha/StDisCha block. Such a
+    thing now claims energystorage while reporting a flat zero, and a silent
+    zero is what made the original defect expensive. See DIVERGENCES.md D-9.
+
+ -- Patrick Schurig <patrick@etm-schurig.eu>  Wed, 26 Aug 2026 14:00:00 +0200
+
+etm-powersync-plugins-modbus (1.15.2+etm9) trixie; urgency=medium
+
+  * sunspec: read Fronius float32 points big endian, the way the hardware
+    emits them. byteOrder() returned ByteOrderLittleEndian on the grounds that
+    "the SunSpec default is assumed"; that conflated the default of the
+    specification with libnymea-sunspec's own, which is the opposite. Every
+    float32 of the Fronius personality was therefore read with its two
+    registers swapped. Measured on a Symo, read only: the model 213 meter on
+    unit 200 serves Hz = 4248 0000, which is 50.0000 big endian and 2.3777e-41
+    swapped. Reproduced in testing: a meter importing 2.7 kW reported as
+    exporting 107 MW, with the arbiter switching every load on, and the thing
+    still reporting itself connected with no Modbus error. The meter sign fix
+    only becomes observable once this is right. solarEdge already forces big
+    endian and the generic vendor keeps its user parameter; neither changes.
+  * sunspec: add tools/read-float-order.py, a read-only probe that decodes Hz
+    and PhVphA both ways so the word order can be settled by measurement
+    rather than assumption.
+
+ -- Patrick Schurig <patrick@etm-schurig.eu>  Fri, 07 Aug 2026 07:00:00 +0200
+
+etm-powersync-plugins-modbus (1.15.2+etm8) trixie; urgency=medium
+
+  * sunspec: ask the connection thing directly instead of resolving it by id.
+    The battery presence gate went through isFroniusChild(), which looks the
+    parent up in myThings(). During the initial setup the parent is not
+    registered yet, the lookup answers false, the Fronius gate is bypassed and
+    the phantom storage child is created after all. Caught in closed-loop
+    testing, not by the unit suite, which covers the decision and not the
+    wiring. See sunspec/DIVERGENCES.md D-7.
+
+ -- Patrick Schurig <patrick@etm-schurig.eu>  Wed, 05 Aug 2026 19:20:00 +0200
+
+etm-powersync-plugins-modbus (1.15.2+etm7) trixie; urgency=medium
+
+  * sunspec: correct the grid meter sign on Fronius. onMeterBlockUpdated()
+    negated the power of every meter model regardless of vendor, but the
+    Fronius Smart Meter already reports in the nymea convention, where a
+    negative value is feed-in. The negation is now undone for meters sitting
+    under a froniusConnection and only for those; generic and solarEdge keep
+    their previous behaviour. Established on a Primo GEN24 3.0, whose single
+    phase inverter gives the direction reference: the plugin reported the
+    inverter's own phase as importing while the two phases carrying no source
+    read as exporting. The arbiter concluded "insufficient surplus" and left
+    the water heater and the heat pump off while the site was exporting.
+    The energy counters were already correct and are left alone.
+  * sunspec: stop creating a phantom battery on Fronius. A hybrid GEN24
+    publishes model 124 whether or not a battery is wired to it, so a storage
+    child was created unconditionally and sat on batteryCritical forever. The
+    child is now created only when a physical quantity says a battery is
+    there. The state of charge is deliberately not used: 0% cannot be told
+    apart from a real but empty battery. See sunspec/DIVERGENCES.md D-6, the
+    battery-present side is still inferred.
+
+ -- Patrick Schurig <patrick@etm-schurig.eu>  Wed, 05 Aug 2026 15:58:00 +0200
+
+etm-powersync-plugins-modbus (1.15.2+etm6) trixie; urgency=medium
+
+  * sunspec: package the vendored SunSpec plugin as nymea-plugin-sunspec-etm01.
+    The plugin was added to the build by the vendoring commit but never
+    packaged, so dh_missing found its .so in debian/tmp with nowhere to install
+    it and aborted the whole source package: no binary package at all came out
+    of this branch, not even for the four unrelated plugins.
+  * sunspec: add the Fronius vendor. A GEN24 answers for the inverter on one
+    unit ID and for its Smart Meter on another, behind the same host and port,
+    so one froniusConnection thing now carries two SunSpecConnection objects.
+    The meter connection is brought up only once the primary has finished
+    discovering, and the parent connected state follows the primary alone.
+  * sunspec: correct the storage setpoint chain - charge and discharge rates
+    read back from InWRte/OutWRte instead of the read-only gradients, the rate
+    range widened to -100..100 so forced charging can be expressed at all,
+    enableDischarging reconciled from StorCtl_Mod, and the revert timer armed
+    with every setpoint so one left behind by a stopped HEMS expires.
+  * debian: add libnymea-sunspec-dev to Build-Depends. Upstream does not need
+    it because it builds libnymea-sunspec from the same source tree; this
+    repository vendors only the plugin and links against the installed library.
+  * The new binary package conflicts with, replaces and provides
+    nymea-plugin-sunspec: it ships the same plugin file and the same pluginId
+    as the upstream package this repository already mirrors.
+
+ -- ETM-Schurig SARL <contact@etm-schurig.eu>  Sun, 02 Aug 2026 12:05:00 +0200
+
+etm-powersync-plugins-modbus (1.15.2+etm5) trixie; urgency=medium
+
+  * abbterra: decode the serial-number and firmware register fields as BCD, as
+    specified by the ABB Modbus spec §5.1 (e.g. 0x49 = week 49, 0x22 = 22 kW),
+    instead of as plain binary. The binary reading made deviceInfoFromValues()
+    reject every real charger whose BCD production-week byte exceeded 0x35
+    (e.g. week 46 = 0x46 = 70 > 53), failing setup with "The device does not
+    match the ABB Terra AC Modbus register map", and mis-decoded the 11 kW/22 kW
+    rated-power codes. Manual TCP add of the charger now completes.
+
+ -- ETM-Schurig SARL <contact@etm-schurig.eu>  Fri, 03 Jul 2026 13:15:00 +0200
+
+etm-powersync-plugins-modbus (1.15.2+etm4) trixie; urgency=medium
+
+  * abbterra: fix TCP manual setup never establishing the connection.
+    setupTcpThing() wired all the connection signals but never called
+    connectDevice(), so reachableChanged()/initializationFinished() never fired
+    and the setup hung until timeout ("Thing setup failed"). Now the connection
+    is started when the NetworkDeviceMonitor reports the device online.
+
+ -- ETM-Schurig SARL <contact@etm-schurig.eu>  Fri, 03 Jul 2026 12:55:00 +0200
+
+etm-powersync-plugins-modbus (1.15.2+etm3) trixie; urgency=medium
+
+  * abbterra: disable TCP auto-discovery (createMethods = "user" only) for the
+    Terra AC Charger (TCP) thing class. Discovery blind-scans the LAN and blows
+    up nymead with a SIGSEGV as soon as any Modbus device answers :502 with an
+    exception response — the crash is in the generated reachability handler and
+    cannot be fixed from the discovery code alone (two attempts failed). For the
+    Waveshare RS485-gateway use case discovery can't determine the slave id
+    anyway; the charger must be added manually (address + port + slaveId). This
+    unblocks adding the charger and stops the crash loop. The underlying
+    generated-code crash is tracked separately.
+
+ -- ETM-Schurig SARL <contact@etm-schurig.eu>  Fri, 03 Jul 2026 12:40:00 +0200
+
+etm-powersync-plugins-modbus (1.15.2+etm2) trixie; urgency=medium
+
+  * abbterra: fix nymead SIGSEGV during ABB Terra AC TCP discovery. On a
+    reachability-check exception (e.g. any Modbus device on the LAN answering
+    :502 with "illegal data address"), AbbTerraTcpDiscovery::cleanupConnection()
+    tore the connection down synchronously from inside the connection's own
+    QModbusReply "finished" handler, freeing the in-flight reply that the
+    generated code still dereferences at abbterramodbustcpconnection.cpp:2062.
+    The teardown is now deferred (Qt::QueuedConnection) and made idempotent.
+  * abbterra: restore checkReachableRegister ("serialNumber"), required by the
+    libnymea-modbus 1.15 connection-class generator.
+
+ -- ETM-Schurig SARL <contact@etm-schurig.eu>  Fri, 03 Jul 2026 12:00:00 +0200
+
+etm-powersync-plugins-modbus (1.15.2+etm1) trixie; urgency=medium
+
+  * Build 1.15,2
+
+ -- ETM-Schurig SARL <contact@etm-schurig.eu>  Tue, 24 Jun 2026 11:00:00 +0200
+
+etm-powersync-plugins-modbus (1.15.0+etm5) trixie; urgency=medium
+
+  * abbterra: fix RTU setup on slow radio links — trigger initialize() on
+    master connectedChanged, not only on reachableChanged (which never fires
+    within setup timeout over 433 MHz).
+
+ -- ETM-Schurig SARL <contact@etm-schurig.eu>  Tue, 24 Jun 2026 10:00:00 +0200
+
+etm-powersync-plugins-modbus (1.15.0+etm4) trixie; urgency=medium
+
+  * Correction modbus registers.
+
+ -- ETM-Schurig SARL <contact@etm-schurig.eu>  Fri, 13 Jun 2026 10:00:00 +0200
+

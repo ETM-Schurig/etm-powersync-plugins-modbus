@@ -1,0 +1,1447 @@
+{
+    "name": "eastron",
+    "displayName": "Eastron",
+    "id": "2078c2fc-c4cd-46bb-95ab-e9a55ef0a281",
+    "paramTypes": [],
+    "vendors": [
+        {
+            "name": "eastron",
+            "displayName": "Eastron",
+            "id": "33529c0d-67e6-441e-b0bb-6e76e9d4bc1c",
+            "thingClasses": [
+
+                {
+                    "name": "sdm630",
+                    "displayName": "Compteur réseau — Eastron SDM630 (3φ)",
+                    "id": "0535818b-bd91-4cb8-8ec7-a870c7b12115",
+                    "createMethods": ["discovery"],
+                    "interfaces": ["energymeter", "connectable"],
+                    "discoveryParamTypes": [
+                        {
+                            "id": "b3ff747c-84a5-4e40-9c45-dd075e767cc3",
+                            "name": "slaveAddress",
+                            "displayName": "Slave address",
+                            "type": "int",
+                            "defaultValue": 1
+                        }
+                    ],
+                    "paramTypes": [
+                        {
+                            "id": "d05fc16a-2fb1-4184-8cd8-2ee05427af13",
+                            "name": "slaveAddress",
+                            "displayName": "Modbus slave address",
+                            "type": "uint",
+                            "defaultValue": 1
+                        },
+                        {
+                            "id": "0b1b47fb-2f05-49da-bf55-58d928f02909",
+                            "name": "modbusMasterUuid",
+                            "displayName": "Modbus RTU master",
+                            "type": "QUuid",
+                            "defaultValue": "",
+                            "readOnly": true
+                        }
+                    ],
+                    "stateTypes": [
+                        {
+                            "id": "e7cd3427-e7d9-4859-8f51-7c685e362eec",
+                            "name": "connected",
+                            "displayName": "Connected",
+                            "displayNameEvent": "Connected changed",
+                            "type": "bool",
+                            "cached": false,
+                            "defaultValue": false
+                        },
+                        {
+                            "id": "e3196bf6-2933-4166-8e36-518ed456c88b",
+                            "name": "voltagePhaseA",
+                            "displayName": "Voltage phase A",
+                            "displayNameEvent": "Voltage phase A changed",
+                            "type": "double",
+                            "unit": "Volt",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "866f9eca-5518-4e0b-8329-fcdef9ff2174",
+                            "name": "voltagePhaseB",
+                            "displayName": "Voltage phase B",
+                            "displayNameEvent": "Voltage phase B changed",
+                            "type": "double",
+                            "unit": "Volt",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "3c8e085b-ede9-410b-9e45-84b067616582",
+                            "name": "voltagePhaseC",
+                            "displayName": "Voltage phase C",
+                            "displayNameEvent": "Voltage phase C changed",
+                            "type": "double",
+                            "unit": "Volt",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "682e4ed8-a6a4-4303-ab23-6d936bc9ea9b",
+                            "name": "currentPhaseA",
+                            "displayName": "Current phase A",
+                            "displayNameEvent": "Current phase A changed",
+                            "type": "double",
+                            "unit": "Ampere",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "5b333cb5-2e62-4615-b75c-f931ecdd7ece",
+                            "name": "currentPhaseB",
+                            "displayName": "Current phase B",
+                            "displayNameEvent": "Current phase B changed",
+                            "type": "double",
+                            "unit": "Ampere",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "e6b7cc83-4fd4-444c-b4e4-098d2e75d06e",
+                            "name": "currentPhaseC",
+                            "displayName": "Current phase C",
+                            "displayNameEvent": "Current phase C changed",
+                            "type": "double",
+                            "unit": "Ampere",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "a1d63410-a603-4897-b951-15677c773f9d",
+                            "name": "currentPower",
+                            "displayName": "Current power",
+                            "displayNameEvent": "Current power changed",
+                            "type": "double",
+                            "unit": "Watt",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "53725aef-3d6e-4c7a-a54a-759f7b15ed7e",
+                            "name": "currentPowerPhaseA",
+                            "displayName": "Current power phase A",
+                            "displayNameEvent": "Current power phase A changed",
+                            "type": "double",
+                            "unit": "Watt",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "f739de45-9237-40cc-93d7-283cb7dcb863",
+                            "name": "currentPowerPhaseB",
+                            "displayName": "Current power phase B",
+                            "displayNameEvent": "Current power phase B changed",
+                            "type": "double",
+                            "unit": "Watt",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "9629c405-36de-4168-a06b-c6bce48142eb",
+                            "name": "currentPowerPhaseC",
+                            "displayName": "Current power phase C",
+                            "displayNameEvent": "Current power phase C changed",
+                            "type": "double",
+                            "unit": "Watt",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "b3724c5a-deda-4186-b364-1f2d65193a80",
+                            "name": "frequency",
+                            "displayName": "Frequency",
+                            "displayNameEvent": "Frequency changed",
+                            "type": "double",
+                            "unit": "Hertz",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "49f6adcd-1994-4686-8294-4afc7a4dcd86",
+                            "name": "totalEnergyConsumed",
+                            "displayName": "Total energy consumed",
+                            "displayNameEvent": "Total energy consumed changed",
+                            "type": "double",
+                            "unit": "KiloWattHour",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "f257effd-6c49-4604-b4c1-5689eae312bc",
+                            "name": "totalEnergyProduced",
+                            "displayName": "Total energy produced",
+                            "displayNameEvent": "Total energy produced changed",
+                            "type": "double",
+                            "unit": "KiloWattHour",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "df2fbaf0-7e36-4790-b614-6f3d4d990a6c",
+                            "name": "energyConsumedPhaseA",
+                            "displayName": "Energy consumed phase A",
+                            "displayNameEvent": "Energy consumed phase A changed",
+                            "type": "double",
+                            "unit": "KiloWattHour",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "ef1471f3-37b5-4d4d-9229-6fbb43b73ca3",
+                            "name": "energyConsumedPhaseB",
+                            "displayName": "Energy consumed phase B",
+                            "displayNameEvent": "Energy consumed phase B changed",
+                            "type": "double",
+                            "unit": "KiloWattHour",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "c04dab09-766d-4868-b284-6edaeb92c498",
+                            "name": "energyConsumedPhaseC",
+                            "displayName": "Energy consumed phase C",
+                            "displayNameEvent": "Energy consumed phase C changed",
+                            "type": "double",
+                            "unit": "KiloWattHour",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "d0eef54c-6b95-4d8f-be4b-32f7ce983d62",
+                            "name": "energyProducedPhaseA",
+                            "displayName": "Energy produced phase A",
+                            "displayNameEvent": "Energy produced phase A changed",
+                            "type": "double",
+                            "unit": "KiloWattHour",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "63b65768-3970-4072-b0c2-e2c143b46bef",
+                            "name": "energyProducedPhaseB",
+                            "displayName": "Energy produced phase B",
+                            "displayNameEvent": "Energy produced phase B changed",
+                            "type": "double",
+                            "unit": "KiloWattHour",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "86d0b64c-488c-4957-b72c-25a7577c41a9",
+                            "name": "energyProducedPhaseC",
+                            "displayName": "Energy produced phase C",
+                            "displayNameEvent": "Energy produced phase C changed",
+                            "type": "double",
+                            "unit": "KiloWattHour",
+                            "defaultValue": 0
+                        }
+                    ]
+                },
+
+                {
+                    "name": "sdm630Consumer",
+                    "displayName": "Consommateur (PAC/charge) — Eastron SDM630 (3φ)",
+                    "id": "54105387-1d86-409d-abeb-248f78a476b7",
+                    "createMethods": ["discovery"],
+                    "interfaces": ["smartmeterconsumer", "connectable"],
+                    "discoveryParamTypes": [
+                        {
+                            "id": "f1766468-db1c-4cc6-939d-85ff33841659",
+                            "name": "slaveAddress",
+                            "displayName": "Slave address",
+                            "type": "int",
+                            "defaultValue": 1
+                        }
+                    ],
+                    "paramTypes": [
+                        {
+                            "id": "6c2e5662-8c92-4934-88f7-f8a06066a49c",
+                            "name": "slaveAddress",
+                            "displayName": "Modbus slave address",
+                            "type": "uint",
+                            "defaultValue": 1
+                        },
+                        {
+                            "id": "58b5d865-a2ef-491d-9c9f-89436ca87011",
+                            "name": "modbusMasterUuid",
+                            "displayName": "Modbus RTU master",
+                            "type": "QUuid",
+                            "defaultValue": "",
+                            "readOnly": true
+                        }
+                    ],
+                    "stateTypes": [
+                        {
+                            "id": "f4decb05-e9de-456f-9b82-f2e86ed41aa9",
+                            "name": "connected",
+                            "displayName": "Connected",
+                            "displayNameEvent": "Connected changed",
+                            "type": "bool",
+                            "cached": false,
+                            "defaultValue": false
+                        },
+                        {
+                            "id": "e28e2222-3109-4074-8131-2f5c097e72b0",
+                            "name": "currentPower",
+                            "displayName": "Current power",
+                            "displayNameEvent": "Current power changed",
+                            "type": "double",
+                            "unit": "Watt",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "8a204eed-d8ea-49af-85dc-73cd47cd05dd",
+                            "name": "totalEnergyConsumed",
+                            "displayName": "Total energy consumed",
+                            "displayNameEvent": "Total energy consumed changed",
+                            "type": "double",
+                            "unit": "KiloWattHour",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "1a66d49e-3da6-4489-bcd7-fe6f384881a0",
+                            "name": "frequency",
+                            "displayName": "Frequency",
+                            "displayNameEvent": "Frequency changed",
+                            "type": "double",
+                            "unit": "Hertz",
+                            "defaultValue": 0
+                        }
+                    ]
+                },
+
+                {
+                    "name": "sdm630Producer",
+                    "displayName": "Onduleur / PV — Eastron SDM630 (3φ)",
+                    "id": "da785267-1dbe-409a-8892-bb4b3ab68728",
+                    "createMethods": ["discovery"],
+                    "interfaces": ["smartmeterproducer", "connectable"],
+                    "discoveryParamTypes": [
+                        {
+                            "id": "856a0582-c52d-4c37-8173-e0616b529c22",
+                            "name": "slaveAddress",
+                            "displayName": "Slave address",
+                            "type": "int",
+                            "defaultValue": 1
+                        }
+                    ],
+                    "paramTypes": [
+                        {
+                            "id": "c7833946-1e97-4c51-9501-8ff7ca8a0493",
+                            "name": "slaveAddress",
+                            "displayName": "Modbus slave address",
+                            "type": "uint",
+                            "defaultValue": 1
+                        },
+                        {
+                            "id": "be7cd84c-3694-4321-9285-853d5ba24e4e",
+                            "name": "modbusMasterUuid",
+                            "displayName": "Modbus RTU master",
+                            "type": "QUuid",
+                            "defaultValue": "",
+                            "readOnly": true
+                        }
+                    ],
+                    "stateTypes": [
+                        {
+                            "id": "935491c9-77dd-4278-a9cb-3788612eab3b",
+                            "name": "connected",
+                            "displayName": "Connected",
+                            "displayNameEvent": "Connected changed",
+                            "type": "bool",
+                            "cached": false,
+                            "defaultValue": false
+                        },
+                        {
+                            "id": "74feee50-3469-4365-98d7-c6f5eefe1736",
+                            "name": "currentPower",
+                            "displayName": "Current power",
+                            "displayNameEvent": "Current power changed",
+                            "type": "double",
+                            "unit": "Watt",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "4d4247a1-425b-4bee-9b93-1f92447e7779",
+                            "name": "totalEnergyProduced",
+                            "displayName": "Total energy produced",
+                            "displayNameEvent": "Total energy produced changed",
+                            "type": "double",
+                            "unit": "KiloWattHour",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "15dd9561-27ad-4a00-a7bc-860ffa17b04f",
+                            "name": "frequency",
+                            "displayName": "Frequency",
+                            "displayNameEvent": "Frequency changed",
+                            "type": "double",
+                            "unit": "Hertz",
+                            "defaultValue": 0
+                        }
+                    ]
+                },
+
+                {
+                    "name": "sdm72",
+                    "displayName": "Compteur réseau — Eastron SDM72 (3φ)",
+                    "id": "d058ef0a-0b0d-4248-a39e-21e9397081db",
+                    "createMethods": ["discovery"],
+                    "interfaces": ["energymeter", "connectable"],
+                    "discoveryParamTypes": [
+                        {
+                            "id": "87b58e0c-3827-4a05-a44c-28f168c65ee3",
+                            "name": "slaveAddress",
+                            "displayName": "Slave address",
+                            "type": "int",
+                            "defaultValue": 1
+                        }
+                    ],
+                    "paramTypes": [
+                        {
+                            "id": "78b2ab1f-19aa-4461-a284-f3b19d99cbe4",
+                            "name": "slaveAddress",
+                            "displayName": "Modbus slave address",
+                            "type": "uint",
+                            "defaultValue": 1
+                        },
+                        {
+                            "id": "63405213-b6c3-4b00-ac55-8fba70edb133",
+                            "name": "modbusMasterUuid",
+                            "displayName": "Modbus RTU master",
+                            "type": "QUuid",
+                            "defaultValue": "",
+                            "readOnly": true
+                        }
+                    ],
+                    "settingsTypes": [
+                        {
+                            "id": "2e18aa7f-e65e-48e3-8d35-240b6a7729e3",
+                            "name": "netMetering",
+                            "displayName": "Net metering (phases summed, as the utility meter counts)",
+                            "type": "bool",
+                            "defaultValue": true
+                        }
+                    ],
+                    "stateTypes": [
+                        {
+                            "id": "73328327-a4f3-4214-9af8-751788730a1f",
+                            "name": "connected",
+                            "displayName": "Connected",
+                            "displayNameEvent": "Connected changed",
+                            "type": "bool",
+                            "cached": false,
+                            "defaultValue": false
+                        },
+                        {
+                            "id": "c02cdb3c-9069-4fce-9470-277fabc89302",
+                            "name": "voltagePhaseA",
+                            "displayName": "Voltage phase A",
+                            "displayNameEvent": "Voltage phase A changed",
+                            "type": "double",
+                            "unit": "Volt",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "53804251-d8fa-4237-8879-2066f31e5e15",
+                            "name": "voltagePhaseB",
+                            "displayName": "Voltage phase B",
+                            "displayNameEvent": "Voltage phase B changed",
+                            "type": "double",
+                            "unit": "Volt",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "1301a94a-12e2-4591-8685-4b710c054645",
+                            "name": "voltagePhaseC",
+                            "displayName": "Voltage phase C",
+                            "displayNameEvent": "Voltage phase C changed",
+                            "type": "double",
+                            "unit": "Volt",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "ba023b21-3704-4e9a-bad0-ce68415782c9",
+                            "name": "currentPhaseA",
+                            "displayName": "Current phase A",
+                            "displayNameEvent": "Current phase A changed",
+                            "type": "double",
+                            "unit": "Ampere",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "3eda9880-70cc-4ace-8279-0022de13dcc5",
+                            "name": "currentPhaseB",
+                            "displayName": "Current phase B",
+                            "displayNameEvent": "Current phase B changed",
+                            "type": "double",
+                            "unit": "Ampere",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "4baeb06f-422a-442a-9d54-b389f555eace",
+                            "name": "currentPhaseC",
+                            "displayName": "Current phase C",
+                            "displayNameEvent": "Current phase C changed",
+                            "type": "double",
+                            "unit": "Ampere",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "a32b70cf-fd55-4204-971d-865a944c7800",
+                            "name": "currentPower",
+                            "displayName": "Current power",
+                            "displayNameEvent": "Current power changed",
+                            "type": "double",
+                            "unit": "Watt",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "15a1d6a7-5d46-4bc9-a83e-db85ddc0b739",
+                            "name": "currentPowerPhaseA",
+                            "displayName": "Current power phase A",
+                            "displayNameEvent": "Current power phase A changed",
+                            "type": "double",
+                            "unit": "Watt",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "3b63f4cf-097b-486b-8cf2-97d97ed67478",
+                            "name": "currentPowerPhaseB",
+                            "displayName": "Current power phase B",
+                            "displayNameEvent": "Current power phase B changed",
+                            "type": "double",
+                            "unit": "Watt",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "60b42caf-75f6-4f0a-8b33-d59c8a169f37",
+                            "name": "currentPowerPhaseC",
+                            "displayName": "Current power phase C",
+                            "displayNameEvent": "Current power phase C changed",
+                            "type": "double",
+                            "unit": "Watt",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "8036f567-2532-4258-8d76-ec2c82bd29f4",
+                            "name": "frequency",
+                            "displayName": "Frequency",
+                            "displayNameEvent": "Frequency changed",
+                            "type": "double",
+                            "unit": "Hertz",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "c6f0c8d6-4bec-445b-843e-baf2f3908d58",
+                            "name": "totalEnergyConsumed",
+                            "displayName": "Total energy consumed",
+                            "displayNameEvent": "Total energy consumed changed",
+                            "type": "double",
+                            "unit": "KiloWattHour",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "482757a4-8b8b-4d41-99d9-5ced48459c63",
+                            "name": "totalEnergyProduced",
+                            "displayName": "Total energy produced",
+                            "displayNameEvent": "Total energy produced changed",
+                            "type": "double",
+                            "unit": "KiloWattHour",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "da428ed4-15a2-4c9c-b6ab-fec1057deca1",
+                            "name": "importEnergyRegister",
+                            "displayName": "Import energy register (30073, per phase)",
+                            "displayNameEvent": "Import energy register (30073, per phase) changed",
+                            "type": "double",
+                            "unit": "KiloWattHour",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "3eace8e2-3dd1-49bc-918c-12fe6f77c462",
+                            "name": "exportEnergyRegister",
+                            "displayName": "Export energy register (30075, per phase)",
+                            "displayNameEvent": "Export energy register (30075, per phase) changed",
+                            "type": "double",
+                            "unit": "KiloWattHour",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "00dcb1e3-3e42-4b2c-9dc0-38ba12e3d6df",
+                            "name": "netEnergyRegister",
+                            "displayName": "Net energy register (30397, import - export)",
+                            "displayNameEvent": "Net energy register (30397, import - export) changed",
+                            "type": "double",
+                            "unit": "KiloWattHour",
+                            "defaultValue": 0
+                        }
+                    ]
+                },
+
+                {
+                    "name": "sdm72Consumer",
+                    "displayName": "Consommateur (PAC/charge) — Eastron SDM72 (3φ)",
+                    "id": "e67c2b0f-3905-454f-890a-9cce0800b703",
+                    "createMethods": ["discovery"],
+                    "interfaces": ["smartmeterconsumer", "connectable"],
+                    "discoveryParamTypes": [
+                        {
+                            "id": "7956c051-4e01-4123-abc6-23d7bf1ed05f",
+                            "name": "slaveAddress",
+                            "displayName": "Slave address",
+                            "type": "int",
+                            "defaultValue": 1
+                        }
+                    ],
+                    "paramTypes": [
+                        {
+                            "id": "d7795c92-d00e-49bc-9005-49e1bc520e25",
+                            "name": "slaveAddress",
+                            "displayName": "Modbus slave address",
+                            "type": "uint",
+                            "defaultValue": 1
+                        },
+                        {
+                            "id": "4cab7e0c-37bd-44cc-a866-219172535323",
+                            "name": "modbusMasterUuid",
+                            "displayName": "Modbus RTU master",
+                            "type": "QUuid",
+                            "defaultValue": "",
+                            "readOnly": true
+                        }
+                    ],
+                    "stateTypes": [
+                        {
+                            "id": "166471bb-136c-467a-a689-39912be1b7ce",
+                            "name": "connected",
+                            "displayName": "Connected",
+                            "displayNameEvent": "Connected changed",
+                            "type": "bool",
+                            "cached": false,
+                            "defaultValue": false
+                        },
+                        {
+                            "id": "3f8dcfbf-9c35-40ed-928f-c8d0859e47f6",
+                            "name": "currentPower",
+                            "displayName": "Current power",
+                            "displayNameEvent": "Current power changed",
+                            "type": "double",
+                            "unit": "Watt",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "aa358341-9409-4a99-ab80-4a7196d446c3",
+                            "name": "totalEnergyConsumed",
+                            "displayName": "Total energy consumed",
+                            "displayNameEvent": "Total energy consumed changed",
+                            "type": "double",
+                            "unit": "KiloWattHour",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "981e0554-9411-4dd0-8af9-56a54e8a4104",
+                            "name": "frequency",
+                            "displayName": "Frequency",
+                            "displayNameEvent": "Frequency changed",
+                            "type": "double",
+                            "unit": "Hertz",
+                            "defaultValue": 0
+                        }
+                    ]
+                },
+
+                {
+                    "name": "sdm72Producer",
+                    "displayName": "Onduleur / PV — Eastron SDM72 (3φ)",
+                    "id": "4fe3a9cc-3d37-45eb-989a-63f84fab119e",
+                    "createMethods": ["discovery"],
+                    "interfaces": ["smartmeterproducer", "connectable"],
+                    "discoveryParamTypes": [
+                        {
+                            "id": "1f900a6d-b835-45e6-b236-67362b697e9b",
+                            "name": "slaveAddress",
+                            "displayName": "Slave address",
+                            "type": "int",
+                            "defaultValue": 1
+                        }
+                    ],
+                    "paramTypes": [
+                        {
+                            "id": "8a60ffcd-32d9-4b2d-a525-f3cd22e126bd",
+                            "name": "slaveAddress",
+                            "displayName": "Modbus slave address",
+                            "type": "uint",
+                            "defaultValue": 1
+                        },
+                        {
+                            "id": "026481d9-d2de-4082-b5ea-73905afa911e",
+                            "name": "modbusMasterUuid",
+                            "displayName": "Modbus RTU master",
+                            "type": "QUuid",
+                            "defaultValue": "",
+                            "readOnly": true
+                        }
+                    ],
+                    "stateTypes": [
+                        {
+                            "id": "406d6b71-b7d8-481e-93f5-535bbe5dab35",
+                            "name": "connected",
+                            "displayName": "Connected",
+                            "displayNameEvent": "Connected changed",
+                            "type": "bool",
+                            "cached": false,
+                            "defaultValue": false
+                        },
+                        {
+                            "id": "a1446da3-3f2d-41a4-a0a8-ebf96bd27b67",
+                            "name": "currentPower",
+                            "displayName": "Current power",
+                            "displayNameEvent": "Current power changed",
+                            "type": "double",
+                            "unit": "Watt",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "6a1b0f7c-4829-48dc-85a5-d8bd640bda33",
+                            "name": "totalEnergyProduced",
+                            "displayName": "Total energy produced",
+                            "displayNameEvent": "Total energy produced changed",
+                            "type": "double",
+                            "unit": "KiloWattHour",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "bacb8a91-7881-4b41-97ae-dc960c420e4c",
+                            "name": "frequency",
+                            "displayName": "Frequency",
+                            "displayNameEvent": "Frequency changed",
+                            "type": "double",
+                            "unit": "Hertz",
+                            "defaultValue": 0
+                        }
+                    ]
+                },
+
+                {
+                    "name": "sdm120",
+                    "displayName": "Compteur réseau — Eastron SDM120 (1φ)",
+                    "id": "46cfdfab-6e93-4568-9ff0-5760909a2a4c",
+                    "createMethods": ["discovery"],
+                    "interfaces": ["energymeter", "connectable"],
+                    "discoveryParamTypes": [
+                        {
+                            "id": "bf10687e-da5e-4c00-932c-f07b069734f7",
+                            "name": "slaveAddress",
+                            "displayName": "Slave address",
+                            "type": "int",
+                            "defaultValue": 1
+                        }
+                    ],
+                    "paramTypes": [
+                        {
+                            "id": "907e6c11-d334-4a56-a87b-ec3e04ea4904",
+                            "name": "slaveAddress",
+                            "displayName": "Modbus slave address",
+                            "type": "uint",
+                            "defaultValue": 1
+                        },
+                        {
+                            "id": "f5c93fbf-325f-4a5e-955d-9b7883c71032",
+                            "name": "modbusMasterUuid",
+                            "displayName": "Modbus RTU master",
+                            "type": "QUuid",
+                            "defaultValue": "",
+                            "readOnly": true
+                        }
+                    ],
+                    "stateTypes": [
+                        {
+                            "id": "956de306-01bb-4f1a-847c-d15e617335a6",
+                            "name": "connected",
+                            "displayName": "Connected",
+                            "displayNameEvent": "Connected changed",
+                            "type": "bool",
+                            "cached": false,
+                            "defaultValue": false
+                        },
+                        {
+                            "id": "35f88f7f-a8a0-4090-968c-832905aed291",
+                            "name": "voltagePhaseA",
+                            "displayName": "Voltage",
+                            "displayNameEvent": "Voltage changed",
+                            "type": "double",
+                            "unit": "Volt",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "094d3441-1718-4170-a9bd-bb157d554afc",
+                            "name": "currentPhaseA",
+                            "displayName": "Current",
+                            "displayNameEvent": "Current changed",
+                            "type": "double",
+                            "unit": "Ampere",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "10ea7d4e-e1a4-4999-aca2-b0183bc36fe4",
+                            "name": "currentPower",
+                            "displayName": "Current power",
+                            "displayNameEvent": "Current power changed",
+                            "type": "double",
+                            "unit": "Watt",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "4965f4b1-8351-4932-9c3c-776a6e32091b",
+                            "name": "frequency",
+                            "displayName": "Frequency",
+                            "displayNameEvent": "Frequency changed",
+                            "type": "double",
+                            "unit": "Hertz",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "03e259b6-ecca-4ee1-bca6-8f34accd0d28",
+                            "name": "totalEnergyConsumed",
+                            "displayName": "Total energy consumed",
+                            "displayNameEvent": "Total energy consumed changed",
+                            "type": "double",
+                            "unit": "KiloWattHour",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "f5348729-8146-4fc1-8d79-fd797e0b4951",
+                            "name": "totalEnergyProduced",
+                            "displayName": "Total energy produced",
+                            "displayNameEvent": "Total energy produced changed",
+                            "type": "double",
+                            "unit": "KiloWattHour",
+                            "defaultValue": 0
+                        }
+                    ]
+                },
+
+                {
+                    "name": "sdm120Consumer",
+                    "displayName": "Consommateur (PAC/charge) — Eastron SDM120 (1φ)",
+                    "id": "e519e207-c6af-4479-af02-af36d6dd290e",
+                    "createMethods": ["discovery"],
+                    "interfaces": ["smartmeterconsumer", "connectable"],
+                    "discoveryParamTypes": [
+                        {
+                            "id": "bc0d2184-0d26-4e61-aded-7eecad2ddf11",
+                            "name": "slaveAddress",
+                            "displayName": "Slave address",
+                            "type": "int",
+                            "defaultValue": 1
+                        }
+                    ],
+                    "paramTypes": [
+                        {
+                            "id": "37555aec-b740-4a17-8b49-4c0538330b86",
+                            "name": "slaveAddress",
+                            "displayName": "Modbus slave address",
+                            "type": "uint",
+                            "defaultValue": 1
+                        },
+                        {
+                            "id": "7bbd3600-1e72-4dcb-a597-3415d32ea2db",
+                            "name": "modbusMasterUuid",
+                            "displayName": "Modbus RTU master",
+                            "type": "QUuid",
+                            "defaultValue": "",
+                            "readOnly": true
+                        }
+                    ],
+                    "stateTypes": [
+                        {
+                            "id": "112240d5-f6fc-4d67-874e-537bda2fe65c",
+                            "name": "connected",
+                            "displayName": "Connected",
+                            "displayNameEvent": "Connected changed",
+                            "type": "bool",
+                            "cached": false,
+                            "defaultValue": false
+                        },
+                        {
+                            "id": "8fc409b7-6e78-4ff5-8910-9b5ad0f59bf0",
+                            "name": "currentPower",
+                            "displayName": "Current power",
+                            "displayNameEvent": "Current power changed",
+                            "type": "double",
+                            "unit": "Watt",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "03c78adf-2d57-40a6-835b-492aab9bb021",
+                            "name": "totalEnergyConsumed",
+                            "displayName": "Total energy consumed",
+                            "displayNameEvent": "Total energy consumed changed",
+                            "type": "double",
+                            "unit": "KiloWattHour",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "f9b356aa-2468-430b-864d-01ac943dfdc9",
+                            "name": "frequency",
+                            "displayName": "Frequency",
+                            "displayNameEvent": "Frequency changed",
+                            "type": "double",
+                            "unit": "Hertz",
+                            "defaultValue": 0
+                        }
+                    ]
+                },
+
+                {
+                    "name": "sdm120Producer",
+                    "displayName": "Onduleur / PV — Eastron SDM120 (1φ)",
+                    "id": "162b883b-3010-478d-a373-ee9446a19d15",
+                    "createMethods": ["discovery"],
+                    "interfaces": ["smartmeterproducer", "connectable"],
+                    "discoveryParamTypes": [
+                        {
+                            "id": "28b1ec59-2f1c-4ee9-afd7-60f8b2540b71",
+                            "name": "slaveAddress",
+                            "displayName": "Slave address",
+                            "type": "int",
+                            "defaultValue": 1
+                        }
+                    ],
+                    "paramTypes": [
+                        {
+                            "id": "a93dd24c-50b5-4a74-8929-f54029778dab",
+                            "name": "slaveAddress",
+                            "displayName": "Modbus slave address",
+                            "type": "uint",
+                            "defaultValue": 1
+                        },
+                        {
+                            "id": "c358a56b-c7ed-4cf8-b74a-b2c95d2ec978",
+                            "name": "modbusMasterUuid",
+                            "displayName": "Modbus RTU master",
+                            "type": "QUuid",
+                            "defaultValue": "",
+                            "readOnly": true
+                        }
+                    ],
+                    "stateTypes": [
+                        {
+                            "id": "2b00f43c-ad66-4ae0-9981-1a43dfd68fde",
+                            "name": "connected",
+                            "displayName": "Connected",
+                            "displayNameEvent": "Connected changed",
+                            "type": "bool",
+                            "cached": false,
+                            "defaultValue": false
+                        },
+                        {
+                            "id": "5c801cb8-b891-45d9-978e-be8ae3a9a6ca",
+                            "name": "currentPower",
+                            "displayName": "Current power",
+                            "displayNameEvent": "Current power changed",
+                            "type": "double",
+                            "unit": "Watt",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "04d99792-1c4d-48fb-8ad6-370689ce387c",
+                            "name": "totalEnergyProduced",
+                            "displayName": "Total energy produced",
+                            "displayNameEvent": "Total energy produced changed",
+                            "type": "double",
+                            "unit": "KiloWattHour",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "c26381c5-0523-4d13-b818-e4e2144e629a",
+                            "name": "frequency",
+                            "displayName": "Frequency",
+                            "displayNameEvent": "Frequency changed",
+                            "type": "double",
+                            "unit": "Hertz",
+                            "defaultValue": 0
+                        }
+                    ]
+                },
+
+                {
+                    "name": "sdm220",
+                    "displayName": "Compteur réseau — Eastron SDM220 (1φ)",
+                    "id": "3cf3b42b-cc14-4f5b-a291-f8682d7f5c9a",
+                    "createMethods": ["discovery"],
+                    "interfaces": ["energymeter", "connectable"],
+                    "discoveryParamTypes": [
+                        {
+                            "id": "56293d68-2e00-4def-bef0-d6b0f7289144",
+                            "name": "slaveAddress",
+                            "displayName": "Slave address",
+                            "type": "int",
+                            "defaultValue": 1
+                        }
+                    ],
+                    "paramTypes": [
+                        {
+                            "id": "cc6aa752-86da-4155-8430-9eb79fd10d09",
+                            "name": "slaveAddress",
+                            "displayName": "Modbus slave address",
+                            "type": "uint",
+                            "defaultValue": 1
+                        },
+                        {
+                            "id": "16cb45f5-7dde-4602-90cd-bbe2d9d58a3c",
+                            "name": "modbusMasterUuid",
+                            "displayName": "Modbus RTU master",
+                            "type": "QUuid",
+                            "defaultValue": "",
+                            "readOnly": true
+                        }
+                    ],
+                    "stateTypes": [
+                        {
+                            "id": "6ff17c3f-9d56-4146-a985-16676732d78b",
+                            "name": "connected",
+                            "displayName": "Connected",
+                            "displayNameEvent": "Connected changed",
+                            "type": "bool",
+                            "cached": false,
+                            "defaultValue": false
+                        },
+                        {
+                            "id": "eb047b88-6869-4d32-b9c3-a3654d3ca64b",
+                            "name": "voltagePhaseA",
+                            "displayName": "Voltage",
+                            "displayNameEvent": "Voltage changed",
+                            "type": "double",
+                            "unit": "Volt",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "f47d9db8-23b3-4b51-bfde-3ff34c1dedf9",
+                            "name": "currentPhaseA",
+                            "displayName": "Current",
+                            "displayNameEvent": "Current changed",
+                            "type": "double",
+                            "unit": "Ampere",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "0c057463-d4a7-4deb-af18-ff7f90a11262",
+                            "name": "currentPower",
+                            "displayName": "Current power",
+                            "displayNameEvent": "Current power changed",
+                            "type": "double",
+                            "unit": "Watt",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "bc82a8a3-2b04-417c-afac-e3f5494d9985",
+                            "name": "frequency",
+                            "displayName": "Frequency",
+                            "displayNameEvent": "Frequency changed",
+                            "type": "double",
+                            "unit": "Hertz",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "c9716b87-8e1d-4cd0-a526-dd1c220cce1b",
+                            "name": "totalEnergyConsumed",
+                            "displayName": "Total energy consumed",
+                            "displayNameEvent": "Total energy consumed changed",
+                            "type": "double",
+                            "unit": "KiloWattHour",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "7f6b35c5-a244-475f-838d-c77aac7b76a1",
+                            "name": "totalEnergyProduced",
+                            "displayName": "Total energy produced",
+                            "displayNameEvent": "Total energy produced changed",
+                            "type": "double",
+                            "unit": "KiloWattHour",
+                            "defaultValue": 0
+                        }
+                    ]
+                },
+
+                {
+                    "name": "sdm220Consumer",
+                    "displayName": "Consommateur (PAC/charge) — Eastron SDM220 (1φ)",
+                    "id": "252578a4-513b-46de-b10f-0bd6efb891aa",
+                    "createMethods": ["discovery"],
+                    "interfaces": ["smartmeterconsumer", "connectable"],
+                    "discoveryParamTypes": [
+                        {
+                            "id": "089bd1af-5196-4d7f-9682-16aa2d988f66",
+                            "name": "slaveAddress",
+                            "displayName": "Slave address",
+                            "type": "int",
+                            "defaultValue": 1
+                        }
+                    ],
+                    "paramTypes": [
+                        {
+                            "id": "7919c29b-22ae-49f0-8c4e-81546e7af2e6",
+                            "name": "slaveAddress",
+                            "displayName": "Modbus slave address",
+                            "type": "uint",
+                            "defaultValue": 1
+                        },
+                        {
+                            "id": "5066a96f-54c4-4165-85dc-b8cae4e6bfb6",
+                            "name": "modbusMasterUuid",
+                            "displayName": "Modbus RTU master",
+                            "type": "QUuid",
+                            "defaultValue": "",
+                            "readOnly": true
+                        }
+                    ],
+                    "stateTypes": [
+                        {
+                            "id": "6574af2b-7bdc-42a9-90f8-9c6381c692fc",
+                            "name": "connected",
+                            "displayName": "Connected",
+                            "displayNameEvent": "Connected changed",
+                            "type": "bool",
+                            "cached": false,
+                            "defaultValue": false
+                        },
+                        {
+                            "id": "4ec350aa-763b-4500-909b-53bd81e0f3cc",
+                            "name": "currentPower",
+                            "displayName": "Current power",
+                            "displayNameEvent": "Current power changed",
+                            "type": "double",
+                            "unit": "Watt",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "3de4a1f3-0c5f-454a-8c42-a4eb674fd1ca",
+                            "name": "totalEnergyConsumed",
+                            "displayName": "Total energy consumed",
+                            "displayNameEvent": "Total energy consumed changed",
+                            "type": "double",
+                            "unit": "KiloWattHour",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "d610133b-6a5f-4011-84fc-9cdb438312b9",
+                            "name": "frequency",
+                            "displayName": "Frequency",
+                            "displayNameEvent": "Frequency changed",
+                            "type": "double",
+                            "unit": "Hertz",
+                            "defaultValue": 0
+                        }
+                    ]
+                },
+
+                {
+                    "name": "sdm220Producer",
+                    "displayName": "Onduleur / PV — Eastron SDM220 (1φ)",
+                    "id": "2885a917-c281-4a03-bf98-e5d596eb0288",
+                    "createMethods": ["discovery"],
+                    "interfaces": ["smartmeterproducer", "connectable"],
+                    "discoveryParamTypes": [
+                        {
+                            "id": "dc485bee-2e90-4743-9b73-fbb8b79e1030",
+                            "name": "slaveAddress",
+                            "displayName": "Slave address",
+                            "type": "int",
+                            "defaultValue": 1
+                        }
+                    ],
+                    "paramTypes": [
+                        {
+                            "id": "b7343b02-f937-4fda-8aec-539c989b99c5",
+                            "name": "slaveAddress",
+                            "displayName": "Modbus slave address",
+                            "type": "uint",
+                            "defaultValue": 1
+                        },
+                        {
+                            "id": "27c7c43a-087f-49c8-bcfa-0a0988f3fe0f",
+                            "name": "modbusMasterUuid",
+                            "displayName": "Modbus RTU master",
+                            "type": "QUuid",
+                            "defaultValue": "",
+                            "readOnly": true
+                        }
+                    ],
+                    "stateTypes": [
+                        {
+                            "id": "4af34e28-c44a-44da-ba1b-a93b7956a2cc",
+                            "name": "connected",
+                            "displayName": "Connected",
+                            "displayNameEvent": "Connected changed",
+                            "type": "bool",
+                            "cached": false,
+                            "defaultValue": false
+                        },
+                        {
+                            "id": "f99063ae-731b-471f-99ba-aa4ca7945a03",
+                            "name": "currentPower",
+                            "displayName": "Current power",
+                            "displayNameEvent": "Current power changed",
+                            "type": "double",
+                            "unit": "Watt",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "e5a06165-2bbb-4b6f-8f5f-8e13f6756501",
+                            "name": "totalEnergyProduced",
+                            "displayName": "Total energy produced",
+                            "displayNameEvent": "Total energy produced changed",
+                            "type": "double",
+                            "unit": "KiloWattHour",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "1bef1573-8d0f-4ba8-82c9-afdf1437eed4",
+                            "name": "frequency",
+                            "displayName": "Frequency",
+                            "displayNameEvent": "Frequency changed",
+                            "type": "double",
+                            "unit": "Hertz",
+                            "defaultValue": 0
+                        }
+                    ]
+                },
+
+                {
+                    "name": "sdm230",
+                    "displayName": "Compteur réseau — Eastron SDM230 (1φ)",
+                    "id": "078d9b32-4004-4ad9-a758-aef99c136858",
+                    "createMethods": ["discovery"],
+                    "interfaces": ["energymeter", "connectable"],
+                    "discoveryParamTypes": [
+                        {
+                            "id": "39b6cfe3-4ff0-4be1-8d68-f5c34c6c721b",
+                            "name": "slaveAddress",
+                            "displayName": "Slave address",
+                            "type": "int",
+                            "defaultValue": 1
+                        }
+                    ],
+                    "paramTypes": [
+                        {
+                            "id": "56e3270f-5760-46ce-9e15-c5107b287af3",
+                            "name": "slaveAddress",
+                            "displayName": "Modbus slave address",
+                            "type": "uint",
+                            "defaultValue": 1
+                        },
+                        {
+                            "id": "768872db-3f33-4d81-abc6-d1fa6d9e2c43",
+                            "name": "modbusMasterUuid",
+                            "displayName": "Modbus RTU master",
+                            "type": "QUuid",
+                            "defaultValue": "",
+                            "readOnly": true
+                        }
+                    ],
+                    "stateTypes": [
+                        {
+                            "id": "2fc9bc20-6f0a-46b3-b1d7-c1837f8a2728",
+                            "name": "connected",
+                            "displayName": "Connected",
+                            "displayNameEvent": "Connected changed",
+                            "type": "bool",
+                            "cached": false,
+                            "defaultValue": false
+                        },
+                        {
+                            "id": "3dcdf851-4d47-472e-871b-f69083b10d62",
+                            "name": "voltagePhaseA",
+                            "displayName": "Voltage",
+                            "displayNameEvent": "Voltage changed",
+                            "type": "double",
+                            "unit": "Volt",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "6890caf9-6d16-439d-8848-cefb32a16529",
+                            "name": "currentPhaseA",
+                            "displayName": "Current",
+                            "displayNameEvent": "Current changed",
+                            "type": "double",
+                            "unit": "Ampere",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "2fb590d5-3b12-4b36-8566-5f9b9b42a669",
+                            "name": "currentPower",
+                            "displayName": "Current power",
+                            "displayNameEvent": "Current power changed",
+                            "type": "double",
+                            "unit": "Watt",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "4344b618-51fe-4c04-9e88-0b133c7e4a95",
+                            "name": "frequency",
+                            "displayName": "Frequency",
+                            "displayNameEvent": "Frequency changed",
+                            "type": "double",
+                            "unit": "Hertz",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "41ef34e3-904e-4282-a203-7d3def3b592b",
+                            "name": "totalEnergyConsumed",
+                            "displayName": "Total energy consumed",
+                            "displayNameEvent": "Total energy consumed changed",
+                            "type": "double",
+                            "unit": "KiloWattHour",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "e382146d-1734-482a-9fea-ad6158da1268",
+                            "name": "totalEnergyProduced",
+                            "displayName": "Total energy produced",
+                            "displayNameEvent": "Total energy produced changed",
+                            "type": "double",
+                            "unit": "KiloWattHour",
+                            "defaultValue": 0
+                        }
+                    ]
+                },
+
+                {
+                    "name": "sdm230Consumer",
+                    "displayName": "Consommateur (PAC/charge) — Eastron SDM230 (1φ)",
+                    "id": "f98df834-6428-4173-a7d1-b91681274bd1",
+                    "createMethods": ["discovery"],
+                    "interfaces": ["smartmeterconsumer", "connectable"],
+                    "discoveryParamTypes": [
+                        {
+                            "id": "ae22d4de-d3f0-4a77-a0bd-8f7070f878fe",
+                            "name": "slaveAddress",
+                            "displayName": "Slave address",
+                            "type": "int",
+                            "defaultValue": 1
+                        }
+                    ],
+                    "paramTypes": [
+                        {
+                            "id": "2fe5a67e-3d9d-4c22-b091-7249df0a1d3a",
+                            "name": "slaveAddress",
+                            "displayName": "Modbus slave address",
+                            "type": "uint",
+                            "defaultValue": 1
+                        },
+                        {
+                            "id": "d0c76f54-2439-4d05-b5bf-14a27f28737b",
+                            "name": "modbusMasterUuid",
+                            "displayName": "Modbus RTU master",
+                            "type": "QUuid",
+                            "defaultValue": "",
+                            "readOnly": true
+                        }
+                    ],
+                    "stateTypes": [
+                        {
+                            "id": "d5016371-ef67-4242-8c74-a69e3e985630",
+                            "name": "connected",
+                            "displayName": "Connected",
+                            "displayNameEvent": "Connected changed",
+                            "type": "bool",
+                            "cached": false,
+                            "defaultValue": false
+                        },
+                        {
+                            "id": "9ab1167c-f890-47ee-aad2-ab4cae775ae2",
+                            "name": "currentPower",
+                            "displayName": "Current power",
+                            "displayNameEvent": "Current power changed",
+                            "type": "double",
+                            "unit": "Watt",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "fdfe8ef0-1f29-4cdd-88d2-165c4adae795",
+                            "name": "totalEnergyConsumed",
+                            "displayName": "Total energy consumed",
+                            "displayNameEvent": "Total energy consumed changed",
+                            "type": "double",
+                            "unit": "KiloWattHour",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "09877c12-ae5b-413e-b37b-ef104e76b66a",
+                            "name": "frequency",
+                            "displayName": "Frequency",
+                            "displayNameEvent": "Frequency changed",
+                            "type": "double",
+                            "unit": "Hertz",
+                            "defaultValue": 0
+                        }
+                    ]
+                },
+
+                {
+                    "name": "sdm230Producer",
+                    "displayName": "Onduleur / PV — Eastron SDM230 (1φ)",
+                    "id": "3d0c210b-2da9-4dcd-ae3f-aa4318262db3",
+                    "createMethods": ["discovery"],
+                    "interfaces": ["smartmeterproducer", "connectable"],
+                    "discoveryParamTypes": [
+                        {
+                            "id": "ed1d95cf-0e9f-4529-b514-80b3a57529ac",
+                            "name": "slaveAddress",
+                            "displayName": "Slave address",
+                            "type": "int",
+                            "defaultValue": 1
+                        }
+                    ],
+                    "paramTypes": [
+                        {
+                            "id": "f35d05e5-f968-4a33-87c6-6ce5840f158a",
+                            "name": "slaveAddress",
+                            "displayName": "Modbus slave address",
+                            "type": "uint",
+                            "defaultValue": 1
+                        },
+                        {
+                            "id": "402ed4c9-4560-4a74-9c6f-a0b29ea23a32",
+                            "name": "modbusMasterUuid",
+                            "displayName": "Modbus RTU master",
+                            "type": "QUuid",
+                            "defaultValue": "",
+                            "readOnly": true
+                        }
+                    ],
+                    "stateTypes": [
+                        {
+                            "id": "a964b0df-d4d2-4242-903b-ba654c800591",
+                            "name": "connected",
+                            "displayName": "Connected",
+                            "displayNameEvent": "Connected changed",
+                            "type": "bool",
+                            "cached": false,
+                            "defaultValue": false
+                        },
+                        {
+                            "id": "ae771224-30b7-478b-8b14-d12e0c2d1f70",
+                            "name": "currentPower",
+                            "displayName": "Current power",
+                            "displayNameEvent": "Current power changed",
+                            "type": "double",
+                            "unit": "Watt",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "a1f48d01-db15-4883-9a62-9520199771a8",
+                            "name": "totalEnergyProduced",
+                            "displayName": "Total energy produced",
+                            "displayNameEvent": "Total energy produced changed",
+                            "type": "double",
+                            "unit": "KiloWattHour",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "d7a9a378-a313-48c5-9360-7ffc8c0a0172",
+                            "name": "frequency",
+                            "displayName": "Frequency",
+                            "displayNameEvent": "Frequency changed",
+                            "type": "double",
+                            "unit": "Hertz",
+                            "defaultValue": 0
+                        }
+                    ]
+                }
+
+            ]
+        }
+    ]
+}

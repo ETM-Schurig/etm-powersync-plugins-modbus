@@ -11,7 +11,7 @@ TARGET = tst_sunspec
 # the plugin itself, so it requires only libnymea-sunspec. The suite that
 # really instantiates the plugin lives in ../plugin/ with its own
 # dependencies. Bus traffic is left to on-site tests (see "Not verifiable by
-# the unit tests of this repository" in specs/fronius-sunspec.md).
+# the unit tests of this repository" in sunspec/FRONIUS.md).
 
 INCLUDEPATH += ../..
 

@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-/* Tests of the acceptance criteria of specs/fronius-sunspec.md.
+/* Tests of the acceptance criteria of sunspec/FRONIUS.md.
  *
  * Each test carries the number of the AC it validates: test_AC_<n>_<what>.
  *
@@ -15,7 +15,7 @@
  *
  * What cannot be verified here (Modbus frames actually emitted, expiry
  * of the timer, auto-scale of the SFs during operation) is listed explicitly in
- * specs/fronius-sunspec.md.
+ * sunspec/FRONIUS.md.
  */
 
 #include <QTest>

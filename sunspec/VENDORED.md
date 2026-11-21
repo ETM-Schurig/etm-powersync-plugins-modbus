@@ -8,7 +8,7 @@ Upstream base: nymea-plugins-modbus 1.15.2
 Copy date: 2026-07-31
 Target package name: powersync-plugin-sunspec
 
-Reason: the Fronius work (see `specs/fronius-sunspec.md`) adds a `fronius`
+Reason: the Fronius work (see `sunspec/FRONIUS.md`) adds a `fronius`
 vendor and fixes defects of the generic `sunspec` vendor. These
 changes live in this ETM repository, not in the nymea mirror.
 

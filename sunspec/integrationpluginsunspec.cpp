@@ -2277,7 +2277,7 @@ void IntegrationPluginSunSpec::bindStorageCompanionModels(Thing *thing, SunSpecM
  * `connected`. Any rework of the model 160 read must be replayed in an
  * on-site test against a known battery power, not just compiled.
  *
- * INV-5 in specs/fronius-sunspec.md, and D-9 in DIVERGENCES.md. */
+ * INV-5 in sunspec/FRONIUS.md, and D-9 in DIVERGENCES.md. */
 QList<FroniusRules::ModuleReading> IntegrationPluginSunSpec::storageModuleReadings(Thing *thing) const
 {
     QList<FroniusRules::ModuleReading> readings;

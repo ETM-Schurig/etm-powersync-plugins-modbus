@@ -1,6 +1,6 @@
 # Divergences — Fronius vendor of the SunSpec plugin
 
-Deliberate gaps between what `specs/fronius-sunspec.md` requires on one hand
+Deliberate gaps between what `sunspec/FRONIUS.md` requires on one hand
 and what the code does on the other. Each entry states **why**
 and **how to resolve it**.
 

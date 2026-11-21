@@ -121,7 +121,7 @@ written.
 
 The `revertTime` timer is meant to lift the limit when it expires, so the action
 must be repeated before that. On the model 124 of a GEN24, this is an assumption
-not yet verified on a real device (AC-10 of `specs/fronius-sunspec.md`).
+not yet verified on a real device (AC-10 of `sunspec/FRONIUS.md`).
 With `revertTime` at 0, no timer is armed and the limit stays in place if
 nymead stops.
 

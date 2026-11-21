@@ -35,7 +35,7 @@
  *
  * Everything here is a pure decision: no Modbus, no thing, no timer. The
  * plugin asks these functions what to do; the answers are what the unit tests
- * pin down. See specs/fronius-sunspec.md.
+ * pin down. See sunspec/FRONIUS.md.
  */
 namespace FroniusRules {
 
